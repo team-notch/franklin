@@ -1,0 +1,46 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+// Compass default settings
+
+$legacy-support-for-ie        : false;
+$experimental-support-for-svg : true;
+
+// Compass Vertical Rhythm Module default settings
+
+$base-font-size        : 16px;
+$base-line-height      : 24px;
+$relative-font-sizing  : false;
+
+// Susy default settings
+// I need to figure out how to use this gem plugin – susy.
+
+$column-width          : 100px;
+$gutter-width          : 20px;
+$grid-unit-width       : $column-width + $gutter-width;
+$grid-padding          : $gutter-width;
+
+// Breakpoints
+$breakpoint-teaser     : 61.25em;
+
+// Colors
+
+$gray-0                : rgb(231,234,236);
+$gray-1                : rgb(205,212,219);
+$gray-2                : rgb(167,173,180);
+$gray-3                : rgb(142,151,167);
+$gray-4                : rgb(92,100,115);
+$gray-5                : rgb(56,61,71);
+
+$franc-pink            : rgb(243,69,166);
+$franc-blue            : rgb(15,197,245);
+$franc-green           : rgb(47,207,116);
+$franc-red             : rgb(241,42,53);
+
+// ==========================================================================
+// Plugins
+// ==========================================================================
+
+@import "compass";
+@import "compass/css3/user-interface";

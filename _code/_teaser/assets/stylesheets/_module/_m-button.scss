@@ -1,0 +1,43 @@
+.m-button {
+  @include background-image(linear-gradient(rgb(244,246,248), $gray-0));
+  @include border-radius(3px);
+  @include box-shadow(0 1px 1px 0 rgba(white, 0.24) inset, 0 -1px 1px 0 rgba(white, 0.24) inset);
+  border: 1px solid rgb(218,220,222);
+  color: $gray-4 !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  height: $base-line-height + 6;
+  line-height: $base-line-height + 4;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.m-button:focus {
+  outline: none;
+}
+
+.m-button--large {
+  @extend .m-button;
+  font-size: 20px !important;
+  height: $base-line-height * 2;
+  line-height: $base-line-height * 2 - 2;
+  padding: 0 20px;
+}
+
+.m-button--primary:not([disabled]) {
+  @include background-image(linear-gradient(rgb(112,222,255), $franc-blue));
+  border-color:  rgb(0,182,228);
+  color: white !important;
+  text-shadow: 0 1px 0 rgb(0,182,228);
+}
+
+.m-button--primary:hover:not([disabled]) {
+  @include background-image(linear-gradient(lighten(rgb(112,222,255), 5%), $franc-blue));
+  border-color: darken(rgb(0,182,228), 2%);
+}
+
+.m-button--primary:active:not([disabled]) {
+  @include background-image(linear-gradient(lighten($franc-blue, 5%), $franc-blue));
+}

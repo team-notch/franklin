@@ -1,0 +1,148 @@
+// ==========================================================================
+// Text  
+// ========================================================================== 
+
+// DESC:
+
+// This file contains low level classes that can be used to alter the 
+// alignment, color, size and stylistic treatment of text nodes.
+
+// TOC:
+
+// [?1] ALIGNMENT
+// [?2] COLOR
+// [?3] LINE-HEIGHT
+// [?4] SIZING
+// [?5] STYLE
+// [?6] TRUNCATION
+// [?7] SPECIAL
+
+// ========================================================================== 
+
+// [?1] ALIGNMENT
+// Module agnostic text alignment utilities. 
+
+.t-center {
+  text-align: center;
+}
+
+.t-left {
+  text-align: left !important;
+}
+
+.t-right {
+  text-align: right;
+}
+
+// [?2] COLOR
+// Adjust text color when not included as part of a module.
+
+.t-color-alert {
+  color: $franc-pink;
+}
+
+.t-color-confirm {
+  color: $franc-green;
+}
+
+.t-color-delete {
+  color: $franc-red !important;
+}
+
+.t-color-delete:hover {
+  color: $franc-red !important;
+}
+
+.t-color-hot {
+ color: $franc-pink;
+}
+
+.t-color-light {
+  color: $gray-4;
+}
+
+.t-color-lighter {
+  color: $gray-3 !important;
+}
+
+.t-color-lightest {
+  color: $gray-2;
+}
+
+.t-color-regular {
+  color: $gray-5;
+}
+
+// [?3] LINE-HEIGHT
+
+.t-callout-text {
+  line-height: 1.5em !important;
+}
+
+.t-body-text {
+  line-height: 1.3125em !important;
+}
+
+.t-caption-text {
+  line-height: 1.125em !important;
+}
+
+.t-single-line-text {
+  line-height: 1em !important;
+}
+
+// [?4] SIZING
+// Override default text size inheritance for child elements.
+
+.t-default {
+  font-size: 1em;
+}
+
+.t-large {
+  font-size: 1.125em !important;
+}
+
+.t-small {
+  font-size: 0.875em !important;
+  line-height: 1em;
+}
+
+.t-smaller {
+  font-size: 0.75em !important;
+  line-height: 1em;
+}
+
+// [?5] STYLE
+// Change type style without the need for additional markup.
+
+.t-thin {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+.t-bold {
+  font-weight: 600;
+}
+
+.t-capitalize {
+  text-transform: capitalize;
+}
+
+.t-uppercase {
+  text-transform: uppercase;
+}
+
+// [?6] TRUNCATION
+// Prevent text from wrapping and truncate with a CSS ellipsis.
+
+.t-truncate {
+  @include ellipsis;
+}
+
+// [?7] SPECIAL
+
+.t-screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}

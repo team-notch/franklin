@@ -1,0 +1,18 @@
+// ==========================================================================
+// Layout 
+// ========================================================================== 
+
+// [?1] FLOATS
+// Float elements left or right without coupling to a module.
+
+.l-left {
+  float: left !important;
+}
+
+.l-right {
+  float: right !important;
+}
+
+.l-clearfix {
+  @include pie-clearfix;
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>:: Franc :: The showgoers app</title>
+    <meta name="description" content="Franc helps you find your friends at any show. Don't be lost, enjoy the show with your friends." />
+    <meta name="keyword" content="franc, franc finder, find franc, festival friend finder, friend finder app, friend locator app, find my friends, show finder," />
+    <meta name="author" content="SaaSquatch Inc" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/stylesheets/main.css"/>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+
+  <body lang="en">
+    <div class="l-wrapper">
+      <div class="m-logo">
+        <h1>Franc - the showgoers friend finder app</h1>
+      </div>
+
+<!-- the content below on first load -->
+    
+      <h1>Don&rsquo;t be lost, enjoy the show with your friends.</h1>
+      <h2>Send us your email and we&rsquo;ll keep you in the loop.</h2>
+      <form class="m-form" action="" autocomplete="on">
+        <div class="m-form__field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="patchouli-dancer@festival.com">
+<!-- the error should only happen if: the person enters an invalid email. If Jill has already sent us her email, DO NOT duplicate it but handle the form as if she sent an approved email and show the success section. Once the user focuses the input to try again remove the error by reapplying the is-hidden class to the m-error div. -->
+          <div class="is-hidden m-error">
+            <p>This is an invalid email.</p>
+          </div>
+        </div>
+        <button class="m-button--large m-button--primary">Keep me posted</button>
+      </form>
+
+<!-- the content below is once a user successfully sends an email -->
+<div style="display:none;">
+      <h2>Thanks for sharing your email. Now spread the word...</h2>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="findfranc">Tweet</a>
+      <div class="fb-share-button" data-href="http://findfranc.com/" data-type="button"></div>
+      <a class="m-button m-button--primary" href="#">Send a friends email</a>
+</div>
+    </div>
+
+    <div class="m-footer">
+      <p>Franc is being developed by SaaSquatch Inc. All rights reserved.</p>
+      <a href="mailto:james@findfranc.com" target="_blank" title="contact the creators of the app">Email us directly</a>
+    </div>
+
+    <script src="assets/javascripts/min/main.min.js"></script>
+
+<!-- sharing shit from facebook and twitter -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=189927507716660";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </body>
+</html>

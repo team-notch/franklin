@@ -1,0 +1,98 @@
+// ==========================================================================
+// Stylesheets
+// ==========================================================================
+
+@import "base";
+@import "reset";
+@import "layout";
+@import "text";
+@import "module";
+
+// ==========================================================================
+// site specific styles
+// ==========================================================================
+body {
+  @include transition(all 0.3s ease);
+  background: white url(../img/teaser-bg.png) no-repeat center 11em;
+  @include background-size(initial);
+  text-align: center;
+
+  @media screen and (min-width: 365px) {
+    background-position: center 8em;
+  }
+  
+  @media screen and (min-width: 800px) {
+    @include background-size(cover);
+    background-position: center 2em;
+  }
+}
+
+.l-wrapper {
+  width: 80%;
+  margin: 0 auto 6em;
+  padding: $base-line-height 0 0;
+
+  @media screen and (min-width: 800px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-teaser) {
+    max-width: $breakpoint-teaser;
+  }
+}
+
+.m-logo {
+  display: block;
+  width: 170px;
+  height: 186px;
+  margin: 0 auto $base-line-height;
+  background: transparent url(../img/franc-logo-teaser.svg) no-repeat 0 0;
+
+  & > h1 { 
+    font-size: 0px;
+    text-indent: -9999em;
+  }
+}
+
+h1, h2 { font-weight: 300; }
+
+h1 {
+  margin: 0 0 $base-line-height - 6;
+  font-size: 2em;
+}
+
+h2 { 
+  margin: 0 0 $base-line-height - 6;
+  font-size: 1.375em;
+}
+
+.fb-share-button,
+#twitter-widget-0 {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#twitter-widget-0 {
+  position: relative;
+  margin-right: 7px;
+}
+
+.m-footer {
+  width: 100%;
+  padding: 0 10%;
+  color: $gray-3;
+
+  @media screen and (min-width: 800px) {
+    position: absolute;
+      bottom: 4em;
+  }
+
+  & > a { 
+    display: block;
+    color: $gray-3;
+    text-decoration: none;
+    &:hover, &:active { color: $franc-blue; }
+  }
+
+  & > p { margin-bottom: 1em;}
+}

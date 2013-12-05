@@ -1,0 +1,98 @@
+// Forms
+.m-form__field {
+  position: relative;
+  width: 100%;
+  margin: 0 auto $base-line-height - 6;
+  padding: 8px 10px 12px;
+  background: white;
+  border: 1px solid $gray-3;
+  text-align: left;
+
+  &.is-focused {
+    border-color: $franc-blue;
+    @include box-shadow(rgba($franc-blue, 0.13) 0 0 3px 1px);
+  }
+
+  &.is-error {
+    border-color: $franc-red;
+    @include box-shadow(rgba($franc-red, 0.13) 0 0 3px 1px);
+  }
+
+  @media screen and (min-width: 500px) {
+    width: 410px;
+  }
+}
+
+.m-error {
+  margin: 12px -10px -12px;
+  padding: 6px 10px;
+  background: $franc-red;
+  color: white;
+
+  &.is-hidden { display: none; }
+}
+
+// Inputs
+
+input {
+  display: block;  
+  padding: 0;
+  width: 100%;
+  font-size: 1em;
+  color: $gray-5;
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+// Labels
+
+label {
+  cursor: pointer;
+  display: block;
+  padding-bottom: 6px;
+  font-size: 0.75em;
+  line-height: 1;
+  color: $gray-4;
+  white-space: nowrap;
+}
+
+.is-focused > label {
+  color: $franc-blue;
+}
+
+::-webkit-input-placeholder {
+  color: $gray-1; 
+  cursor: text;
+}
+
+.m-form__input::-webkit-input-placeholder {
+    padding-top: 2px;
+}
+
+:-moz-placeholder {
+  color: $gray-1; 
+  cursor: text;
+  padding: 0;
+}
+
+::-moz-placeholder {
+  color: $gray-1; 
+  cursor: text;
+  padding: 0;
+}
+
+:focus::-webkit-input-placeholder { opacity: 0.8; }
+:focus:-moz-placeholder { opacity: 0.8; }
+:focus::-moz-placeholder { opacity: 0.8; }
+
+// Errors
+
+[class*="--error"] > input[class*="m-form__input"]:focus + .m-form__input__error {
+  @include opacity(1);
+  visibility: visible;
+}
+

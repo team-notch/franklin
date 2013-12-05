@@ -1,0 +1,11 @@
+/* line 52, ../stylesheets/main.scss */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #383d47;
+}
+
+/* line 58, ../stylesheets/main.scss */
+.l-wrapper {
+  width: 80%;
+}
