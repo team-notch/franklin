@@ -79,20 +79,29 @@ h2 {
 
 .m-footer {
   width: 100%;
-  padding: 0 10%;
-  color: $gray-3;
-
-  @media screen and (min-width: 800px) {
-    position: absolute;
-      bottom: 4em;
-  }
+  padding: 1em 10%;
+  background: rgba($gray-5, 0.8);
+  color: $gray-2;
 
   & > a { 
     display: block;
-    color: $gray-3;
+    color: $gray-2;
     text-decoration: none;
     &:hover, &:active { color: $franc-blue; }
   }
 
-  & > p { margin-bottom: 1em;}
+  & > p { 
+    & > a { 
+      color: $gray-2;
+      text-decoration: none;
+      &:hover, &:active { color: $franc-blue; }
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    position: absolute;
+      bottom: 0;
+
+    & > p { margin-bottom: 0; }
+  }
 }

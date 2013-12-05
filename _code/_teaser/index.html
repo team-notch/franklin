@@ -28,11 +28,11 @@
       <h2>Send us your email and we&rsquo;ll keep you in the loop.</h2>
       <form class="m-form" action="" autocomplete="on">
         <div class="m-form__field">
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="patchouli-dancer@festival.com">
+          <label class="is-hidden" for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Your email...">
 <!-- the error should only happen if: the person enters an invalid email. If Jill has already sent us her email, DO NOT duplicate it but handle the form as if she sent an approved email and show the success section. Once the user focuses the input to try again remove the error by reapplying the is-hidden class to the m-error div. -->
           <div class="is-hidden m-error">
-            <p>This is an invalid email.</p>
+            <p>Whoops! This is email is off.</p>
           </div>
         </div>
         <button class="m-button--large m-button--primary">Keep me posted</button>
@@ -40,16 +40,16 @@
 
 <!-- the content below is once a user successfully sends an email -->
 <div style="display:none;">
-      <h2>Thanks for sharing your email. Now spread the word...</h2>
+      <h2>Thanks for the email. Now spread the word...</h2>
       <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-hashtags="findfranc">Tweet</a>
       <div class="fb-share-button" data-href="http://findfranc.com/" data-type="button"></div>
-      <a class="m-button m-button--primary" href="#">Send a friends email</a>
+      <a class="m-button m-button--primary" href="#">Send another email</a>
 </div>
     </div>
 
     <div class="m-footer">
-      <p>Franc is being developed by SaaSquatch Inc. All rights reserved.</p>
-      <a href="mailto:james@findfranc.com" target="_blank" title="contact the creators of the app">Email us directly</a>
+      <p>Questions? Email <a href="mailto:james@findfranc.com" target="_blank" title="contact the creators of the app">james@findfranc.com</a>.</p>
+      
     </div>
 
     <script src="assets/javascripts/min/main.min.js"></script>

@@ -58,6 +58,8 @@ label {
   line-height: 1;
   color: $gray-4;
   white-space: nowrap;
+
+  &.is-hidden { display: none; }
 }
 
 .is-focused > label {

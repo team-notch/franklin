@@ -527,6 +527,9 @@ label {
   color: #5c6473;
   white-space: nowrap;
 }
+label.is-hidden {
+  display: none;
+}
 
 .is-focused > label {
   color: #0fc5f5;
@@ -652,23 +655,31 @@ h2 {
 
 .m-footer {
   width: 100%;
-  padding: 0 10%;
-  color: #8e97a7;
-}
-@media screen and (min-width: 800px) {
-  .m-footer {
-    position: absolute;
-    bottom: 4em;
-  }
+  padding: 1em 10%;
+  background: rgba(56, 61, 71, 0.8);
+  color: #a7adb4;
 }
 .m-footer > a {
   display: block;
-  color: #8e97a7;
+  color: #a7adb4;
   text-decoration: none;
 }
 .m-footer > a:hover, .m-footer > a:active {
   color: #0fc5f5;
 }
-.m-footer > p {
-  margin-bottom: 1em;
+.m-footer > p > a {
+  color: #a7adb4;
+  text-decoration: none;
+}
+.m-footer > p > a:hover, .m-footer > p > a:active {
+  color: #0fc5f5;
+}
+@media screen and (min-width: 800px) {
+  .m-footer {
+    position: absolute;
+    bottom: 0;
+  }
+  .m-footer > p {
+    margin-bottom: 0;
+  }
 }
