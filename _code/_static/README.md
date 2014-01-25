@@ -1,0 +1,1 @@
+This is the static HTML/SCSS/CSS to lace into the PhoneGap application
