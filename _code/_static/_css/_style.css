@@ -76,6 +76,19 @@ button {
   padding: 20px;
   font-size: 1.75em;
   text-shadow: 0px 2px 0px #00B6E4; }
+  button.secondary {
+    background: #FFFFFF;
+    color: #2DCFF7;
+    border: 2px solid #2DCFF7; }
+  button.tertiary {
+    background: #FFFFFF;
+    border: 2px solid #959DAB;
+    color: #959DAB; }
+  button.disabled {
+    background: #FFFFFF;
+    border: 2px solid #DADDE0;
+    color: #B5BDC9;
+    text-shadow: 0px 2px 0px rgba(255, 254, 254, 0.7); }
 
 .sign-in {
   padding: 71px 59px; }
