@@ -46,12 +46,8 @@ body {
   background: #ffffff; }
 
 a {
-  display: block;
-  text-align: center;
-  font-size: 28px;
-  color: #F666B4;
-  text-decoration: none;
-  margin-top: 30px; }
+  color: #606874;
+  text-decoration: none; }
 
 label {
   display: block;
@@ -94,6 +90,47 @@ button {
   padding: 71px 59px; }
   .sign-in .box {
     margin: 30px 0; }
+  .sign-in a {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    color: #F666B4;
+    text-decoration: none;
+    margin-top: 30px; }
+
+#map {
+  width: 100vw;
+  height: 100vh;
+  background: #D8D8D8; }
+
+#nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 10px 0px;
+  background: #ffffff; }
+  #nav a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 33%;
+    padding: 30px 0;
+    text-align: center; }
+    #nav a.selected {
+      color: #F345A6; }
+      #nav a.selected:after {
+        content: '';
+        height: 0;
+        width: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 12px;
+        border-bottom-color: #f345a6;
+        position: absolute;
+        bottom: 0;
+        left: 45%; }
 
 .wrapper {
   width: 521px;
