@@ -26,7 +26,8 @@ input {
   font-weight: 300;
   color: #5D6473;
 }
-button {
+button,
+a.btn {
   @include linear-gradient(-180deg, #70DEFF 0%, #0FC5F5 100%);
   border: 2px solid #00B6E4;
   border-radius: 6px;
@@ -38,6 +39,7 @@ button {
     background: #FFFFFF;
     color: #2DCFF7;
     border: 2px solid #2DCFF7;
+    text-shadow: none;
   }
   &.tertiary {
     background: #FFFFFF;
@@ -141,20 +143,66 @@ button {
 }
 .list {
   @include linear-gradient(-180deg, rgba(0,0,0,0.06) 0%, rgba(255,255,255,0.00) 10px);
-  position: absolute;
-  top: 71px;
+  // position: absolute;
+  // top: 71px;
   background-color: #ffffff;
   width: 100%;
   height: 90%;
   border-top: 2px solid #D4D8DC;
   li {
+    @include clearfix();
     @include box-sizing(border-box);
     padding: 20px;
     border-bottom: 1px solid #E2E6EA;
   }
+  .name,
+  .status {
+    float: left;
+    font-size: 1.5em;
+    padding-top: 20px;
+  }
   .invite {
     padding-left: 100px;
+    font-size: 1.5em;
+    line-height: 1.9em;
   }
+  a.btn {
+    float: right;
+    font-size: 1.5em;
+  }
+  .status {
+    float: right;
+  }
+  .approved {
+    width: 32px;
+    height: 32px;
+    background: url(../_img/approved.png)no-repeat center;
+  }
+}
+.profile-img-small {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+.no-image {
+  @include box-sizing(border-box);
+  @include linear-gradient(-180deg, rgba(82,196,246,0.20) 0%, #52C4F6 100%);
+  padding: 5px 0;
+  font-size: 28px;
+  color: #FFFFFF;
+  line-height: 36px;
+  text-shadow: 0px 2px 2px rgba(55,61,71,0.20);
+  border: 1px solid #52C4F6;
+  text-align: center;
+}
+.add {
+  float: right;
+  width: 34px;
+  height: 33px;
+  background: url(../_img/add.png)no-repeat center;
 }
 
 

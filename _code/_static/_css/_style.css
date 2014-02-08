@@ -62,7 +62,8 @@ input {
   font-weight: 300;
   color: #5D6473; }
 
-button {
+button,
+a.btn {
   background-color: #70deff;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #70deff), color-stop(100%, #0fc5f5));
   background-image: -webkit-linear-gradient(-90deg, #70deff 0%, #0fc5f5 100%);
@@ -73,15 +74,19 @@ button {
   padding: 20px;
   font-size: 1.75em;
   text-shadow: 0px 2px 0px #00B6E4; }
-  button.secondary {
+  button.secondary,
+  a.btn.secondary {
     background: #FFFFFF;
     color: #2DCFF7;
-    border: 2px solid #2DCFF7; }
-  button.tertiary {
+    border: 2px solid #2DCFF7;
+    text-shadow: none; }
+  button.tertiary,
+  a.btn.tertiary {
     background: #FFFFFF;
     border: 2px solid #959DAB;
     color: #959DAB; }
-  button.disabled {
+  button.disabled,
+  a.btn.disabled {
     background: #FFFFFF;
     border: 2px solid #DADDE0;
     color: #B5BDC9;
@@ -180,17 +185,67 @@ button {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.06)), color-stop(10px, rgba(255, 255, 255, 0)));
   background-image: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.06) 0%, rgba(255, 255, 255, 0) 10px);
   background-image: linear-gradient(-180deg,rgba(0, 0, 0, 0.06) 0%, rgba(255, 255, 255, 0) 10px);
-  position: absolute;
-  top: 71px;
   background-color: #ffffff;
   width: 100%;
   height: 90%;
   border-top: 2px solid #D4D8DC; }
   .list li {
+    *zoom: 1;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px;
     border-bottom: 1px solid #E2E6EA; }
+    .list li:before, .list li:after {
+      content: " ";
+      display: table; }
+    .list li:after {
+      clear: both; }
+  .list .name,
+  .list .status {
+    float: left;
+    font-size: 1.5em;
+    padding-top: 20px; }
   .list .invite {
-    padding-left: 100px; }
+    padding-left: 100px;
+    font-size: 1.5em;
+    line-height: 1.9em; }
+  .list a.btn {
+    float: right;
+    font-size: 1.5em; }
+  .list .status {
+    float: right; }
+  .list .approved {
+    width: 32px;
+    height: 32px;
+    background: url(../_img/approved.png) no-repeat center; }
+
+.profile-img-small {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 50%; }
+
+.no-image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(82, 196, 246, 0.2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(82, 196, 246, 0.2)), color-stop(100%, #52c4f6));
+  background-image: -webkit-linear-gradient(-90deg, rgba(82, 196, 246, 0.2) 0%, #52c4f6 100%);
+  background-image: linear-gradient(-180deg,rgba(82, 196, 246, 0.2) 0%, #52c4f6 100%);
+  padding: 5px 0;
+  font-size: 28px;
+  color: #FFFFFF;
+  line-height: 36px;
+  text-shadow: 0px 2px 2px rgba(55, 61, 71, 0.2);
+  border: 1px solid #52C4F6;
+  text-align: center; }
+
+.add {
+  float: right;
+  width: 34px;
+  height: 33px;
+  background: url(../_img/add.png) no-repeat center; }
