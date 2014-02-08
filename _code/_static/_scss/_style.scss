@@ -45,6 +45,7 @@ a.btn {
     background: #FFFFFF;
     border: 2px solid #959DAB;
     color: #959DAB;
+    text-shadow: none;
   }
   &.disabled {
     background: #FFFFFF;
@@ -111,6 +112,16 @@ a.btn {
     box-shadow: inset rgba(0,0,0,0.4) 2px 0px 10px -5px;
   }
 }
+#notifications.list {
+  .description {
+    width: 80%;
+  }
+  .btn {
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px;  
+  }
+}
 .wrapper {
   width: 521px;
   margin: 0 auto;
@@ -155,7 +166,7 @@ a.btn {
     padding: 20px;
     border-bottom: 1px solid #E2E6EA;
   }
-  .name,
+  .description,
   .status {
     float: left;
     font-size: 1.5em;
@@ -173,10 +184,14 @@ a.btn {
   .status {
     float: right;
   }
-  .approved {
+  .approved,
+  .alert {
     width: 32px;
     height: 32px;
     background: url(../_img/approved.png)no-repeat center;
+  }
+  .alert {
+    background: url(../_img/alert.png)no-repeat center;
   }
 }
 .profile-img-small {
