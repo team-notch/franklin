@@ -105,6 +105,60 @@ a.btn {
     text-decoration: none;
     margin-top: 30px; }
 
+#menu-toggle {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  padding: 13px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.5) -5px 2px 3px 0px;
+  border: 1px solid #d4d8dc;
+  border-left-width: 0; }
+  #menu-toggle a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../_img/menu.png) no-repeat center; }
+  #menu-toggle.open a {
+    -webkit-transform: scale(-1);
+    -moz-transform: scale(-1);
+    -ms-transform: scale(-1);
+    -o-transform: scale(-1);
+    transform: scale(-1); }
+
+#menu {
+  position: absolute;
+  left: -80%;
+  width: 80%;
+  height: 100vh;
+  background: #fafcff;
+  box-shadow: inset rgba(0, 0, 0, 0.3) -1px -2px 10px 0px; }
+  #menu #sign-out {
+    position: absolute;
+    bottom: 90px; }
+  #menu .header {
+    padding: 20px; }
+    #menu .header img {
+      display: inline-block;
+      width: 85px; }
+    #menu .header h1 {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 2em;
+      padding: 25px 0; }
+  #menu .invisible {
+    padding-left: 60px;
+    background: url(../_img/invisible.png) no-repeat 40px center; }
+  #menu a {
+    display: block;
+    padding: 10px 40px;
+    font-size: 1.25em; }
+
 #map {
   width: 100vw;
   height: 100vh;
@@ -141,9 +195,7 @@ a.btn {
         left: 45%; }
 
 #search {
-  position: absolute;
   width: 100%;
-  top: 0;
   background: #ffffff; }
   #search input {
     -webkit-box-sizing: border-box;

@@ -69,6 +69,65 @@ a.btn {
     margin-top: 30px;
   }
 }
+#menu-toggle {
+  @include box-sizing(border-box);
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  padding: 13px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.5) -5px 2px 3px 0px;
+  border: 1px solid #d4d8dc;
+  border-left-width: 0;
+  a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../_img/menu.png)no-repeat center;    
+  }
+  &.open {
+    // left: 80%;
+    a {
+      @include transform(scale(-1));
+    }
+  }
+}
+#menu {
+  position: absolute;
+  left: -80%;
+  width: 80%;
+  height:100vh;
+  background: #fafcff;
+  box-shadow: inset rgba(0,0,0,0.3) -1px -2px 10px 0px;
+  #sign-out {
+    position: absolute;
+    bottom: 90px;
+  }
+  .header {
+    padding: 20px;
+    img {
+      display: inline-block;
+      width: 85px;
+    }
+    h1 {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 2em;
+      padding: 25px 0;
+    }
+  }
+  .invisible {
+    padding-left: 60px;
+    background: url(../_img/invisible.png)no-repeat 40px center;
+  }
+  a {
+    display: block;
+    padding: 10px 40px;
+    font-size: 1.25em;
+  }
+}
 #map {
   width: 100vw;
   height: 100vh;
@@ -101,9 +160,9 @@ a.btn {
   }
 }
 #search {
-  position: absolute;
+  // position: absolute;
+  // top: 0;
   width: 100%;
-  top: 0;
   background: #ffffff;
   input {
     @include box-sizing(border-box);

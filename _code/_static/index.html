@@ -6,57 +6,74 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- Add Open class to move the positioning and change the icon -->
+  <div id="menu-toggle">
+    <a href="#"></a>
+  </div>
+  <div id="menu">
+    <div class="header">
+      <img src="_img/profile-image.png" alt="" />
+      <h1>Jeffery Simpson</h1>
+    </div>
+    <a href="#">Your profile</a>
+    <a href="#">App settings</a>
+    <a href="#">App feedback</a>
+    <a href="#" class="invisible">Go invisibile</a>
+    <a href="#" id="sign-out">Sign out</a>
+  </div>
   <div id="map"></div>
   <div id="nav">
     <a href="#">Notifications</a>
     <a href="#">Friends in the area</a>
     <a href="#">Find friends</a>   
   </div>
-  <div id="search">
-    <a class="back"></a>
-    <input type="text" placeholder="Search..." />
-  </div>
-  <ul id="friends" class="list">
-    <li class="invite">
-      <span>Tell a friend about franc...</span>
-      <span class="add"></span>
-    </li>
-    <li>
-      <span class="profile-img-small no-image">Jw</span>
-      <span class="description">jackie0912@yahoo.com</span>
-      <a href="#" class="btn secondary">Find</a>
-    </li>
-    <li>
-      <img src="_img/profile-image-1.png" alt="" class="profile-img-small" />
-      <span class="description">jack.in.the.box@gmail.com</span>
-      <span class="status pending">Pending</span>
-    </li>
-    <li class="pending">
-      <img src="_img/profile-image-2.png" alt="" class="profile-img-small" />
-      <span class="description">Jackolyn Bridgeport</span>
-      <span class="status pending">Pending...</span>
-    </li>
-    <li>
-      <span class="profile-img-small no-image">Jc</span>
-      <span class="description">Jackson Campbell</span>
-      <a href="#" class="btn secondary">Find</a>
-    </li>
-    <li>
-      <span class="profile-img-small no-image">Jf</span>
-      <span class="description">Jason Fredrickson</span>
-      <span class="status pending">Pending...</span>
-    </li>
-    <li>
-      <span class="profile-img-small no-image">Jk</span>
-      <span class="description">Jassica Kingston</span>
-      <span class="status pending">Pending...</span>
-    </li>
-    <li>
-      <span class="profile-img-small no-image">Jh</span>
-      <span class="description">jimi.hendrix@gmail.com</span>
-      <span class="status approved"></span>
-    </li>
-  </ul>
+  <section id="find-friends">
+    <div id="search">
+      <a class="back"></a>
+      <input type="text" placeholder="Search..." />
+    </div>
+    <ul id="friends" class="list">
+      <li class="invite">
+        <span>Tell a friend about franc...</span>
+        <span class="add"></span>
+      </li>
+      <li>
+        <span class="profile-img-small no-image">Jw</span>
+        <span class="description">jackie0912@yahoo.com</span>
+        <a href="#" class="btn secondary">Find</a>
+      </li>
+      <li>
+        <img src="_img/profile-image-1.png" alt="" class="profile-img-small" />
+        <span class="description">jack.in.the.box@gmail.com</span>
+        <span class="status pending">Pending</span>
+      </li>
+      <li class="pending">
+        <img src="_img/profile-image-2.png" alt="" class="profile-img-small" />
+        <span class="description">Jackolyn Bridgeport</span>
+        <span class="status pending">Pending...</span>
+      </li>
+      <li>
+        <span class="profile-img-small no-image">Jc</span>
+        <span class="description">Jackson Campbell</span>
+        <a href="#" class="btn secondary">Find</a>
+      </li>
+      <li>
+        <span class="profile-img-small no-image">Jf</span>
+        <span class="description">Jason Fredrickson</span>
+        <span class="status pending">Pending...</span>
+      </li>
+      <li>
+        <span class="profile-img-small no-image">Jk</span>
+        <span class="description">Jassica Kingston</span>
+        <span class="status pending">Pending...</span>
+      </li>
+      <li>
+        <span class="profile-img-small no-image">Jh</span>
+        <span class="description">jimi.hendrix@gmail.com</span>
+        <span class="status approved"></span>
+      </li>
+    </ul>
+  </section>
   <ul id="notifications" class="list">
     <li>
       <span class="profile-img-small no-image">Gc</span>
