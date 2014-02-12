@@ -20,6 +20,7 @@ var app = {
 
   initializeMap: function(position) {
     var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    var friendLatLng = new google.maps.LatLng(position.coords.latitude + 0.005, position.coords.longitude);
     var mapOptions = {
         center: myLatLng,
         zoom: 15,
@@ -30,6 +31,13 @@ var app = {
 
     var marker = new google.maps.Marker({
       position: myLatLng,
+      icon: '_img/marker-me.png',
+      animation: google.maps.Animation.DROP,
+      map: map
+    });
+
+    var friendMarker = new google.maps.Marker({
+      position: friendLatLng,
       icon: '_img/marker-me.png',
       animation: google.maps.Animation.DROP,
       map: map
