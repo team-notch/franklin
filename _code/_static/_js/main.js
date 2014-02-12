@@ -21,6 +21,19 @@ var app = {
   initializeMap: function(position) {
     var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     var friendLatLng = new google.maps.LatLng(position.coords.latitude + 0.005, position.coords.longitude);
+    var friend2LagLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude + 0.005);
+
+    var friends = [
+      {
+        image: '_img/profile-image-2.png',
+        position: friendLatLng
+      },
+      {
+        image: '_img/profile-image-1.png',
+        position: friend2LagLng
+      }
+    ];
+
     var mapOptions = {
         center: myLatLng,
         zoom: 15,
@@ -36,11 +49,33 @@ var app = {
       map: map
     });
 
-    var friendMarker = new google.maps.Marker({
-      position: friendLatLng,
-      icon: '_img/marker-me.png',
-      animation: google.maps.Animation.DROP,
-      map: map
+    $.each(friends, function(index, friend){
+      var friendMarker = new google.maps.Marker({
+        position: friend.position,
+        icon: '_img/marker.png',
+        animation: google.maps.Animation.DROP,
+        map: map
+      });
+
+      var image = {
+        url: friend.image,
+        anchor: new google.maps.Point(24,72)
+      };
+
+      var friendImage = new google.maps.Marker({
+        position: friend.position,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+        map: map
+      });
+
+      var infowindow = new google.maps.InfoWindow({
+        content: 'contentString'
+      });
+
+      google.maps.event.addListener(friendImage, 'click', function() {
+        infowindow.open(map,friendImage);
+      });
     });
   }
 
