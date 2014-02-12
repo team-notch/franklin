@@ -5,9 +5,9 @@
 	<key>app</key>
 	<string>com.bohemiancoding.sketch.beta</string>
 	<key>build</key>
-	<integer>5310</integer>
+	<integer>5335</integer>
 	<key>commit</key>
-	<string>d845936448b21176c8d9561671aa8abbacc6d4c9</string>
+	<string>ef46e9b722dbdd85c160b37cd3a0c891265771c9</string>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
