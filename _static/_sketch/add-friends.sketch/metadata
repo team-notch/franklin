@@ -94,7 +94,7 @@
 		<string>ArialMT</string>
 		<string>Arial-BoldMT</string>
 		<string>SourceSansPro-Regular</string>
-		<string>flaticons-solid</string>
+		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
@@ -102,7 +102,7 @@
 		<string>SourceSansPro-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>5486599</integer>
+	<integer>5813758</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
