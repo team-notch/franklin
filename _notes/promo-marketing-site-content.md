@@ -3,8 +3,10 @@
 ## goals for the promo site
 - make a connection with a person and,
 - show them the problem franc solves
-- be a place for FAQ
 - be a place for festivals to learn about ways they can get the use of franc at their festival
+- contact: dribble, twitter, email
+- copyright
+- ability to share
 - 
 
 ## site layout
