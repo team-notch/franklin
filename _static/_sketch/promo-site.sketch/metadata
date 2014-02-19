@@ -21,16 +21,21 @@
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
-		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Light</string>
 	</array>
 	<key>length</key>
-	<integer>12699124</integer>
+	<integer>1271775</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
