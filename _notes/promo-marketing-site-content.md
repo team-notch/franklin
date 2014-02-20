@@ -2,12 +2,11 @@
 
 ## goals for the promo site
 - make a connection with a person and,
-- show them the problem franc solves
+- x show them the problem franc solves
 - be a place for festivals to learn about ways they can get the use of franc at their festival
-- contact: dribble, twitter, email
+- x contact: dribble, twitter, email
 - copyright
 - ability to share
-- 
 
 ## site layout
 - top section describes the problem, makes a connection with the user the "yeah... I've been there!"
@@ -24,8 +23,13 @@ what do you do to make this stress free, easy, and make sure you all meet up?
 - Franc let's you ask others to stay put so you can meet up.
 - Franc is private, you have the final say in who can find you.
 
-
 what can you do to make this all go off without a hitch?
+
+### app screenshot section
+- Who do you see shows with? Add your friends so you can easily find each other at shows or festivals. Don’t worry… you have control over who can find you using franc.
+- Where is everyone? Always know where your friends are using the map.
+- Who's on the move and who's digging their spot at a show? Can we meet up? Ask them to "stay put" so y'all can meet up.
+- Enjoy the show with friends!
 
 ## festival/venue section
 - is someone interested in having franc plugged into their existing festival app?
