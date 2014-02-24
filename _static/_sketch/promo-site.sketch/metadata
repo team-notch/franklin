@@ -63,19 +63,18 @@
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
-		<string>SourceSansPro-Light</string>
-		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
-		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
-		<string>SourceSansPro-Light</string>
-		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
@@ -91,7 +90,7 @@
 		<string>SourceSansPro-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>15269965</integer>
+	<integer>14841091</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
