@@ -26,9 +26,6 @@
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
-		<string>SourceSansPro-Regular</string>
-		<string>SourceSansPro-Regular</string>
-		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Light</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
@@ -109,9 +106,13 @@
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Regular</string>
 		<string>SourceSansPro-Light</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
+		<string>SourceSansPro-Regular</string>
 	</array>
 	<key>length</key>
-	<integer>14939404</integer>
+	<integer>28418787</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>
