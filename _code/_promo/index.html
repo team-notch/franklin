@@ -12,7 +12,7 @@ helps you easily find and meet up with friends." />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/stylesheets/main.css"/>
+    <link rel="stylesheet" href="_assets/stylesheets/main.css"/>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
@@ -21,49 +21,76 @@ helps you easily find and meet up with friends." />
     <![endif]-->
 
     <header id="home">
-      <div class="m-logo">
-        <h1>franc... never be lost at a show</h1>
-      </div>
-      <div class="m-pitch">
-        <h1>Don&rsquo;t be lost at the show (or festival), <span class="franc-text">franc</span> helps you easily find and meet up with friends.</h1>
-        <p>Coming soon for the summer festival scene! Want updates?</p>
-        <form class="m-form-sign-up">
-          <div class="m-form__field">
-            <label class="is-hidden" for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="Your email...">
+      <div class="full-width--header">
+        <div class="m-logo">
+          <h1>franc... never be lost at a show</h1>
+        </div>
+        <div class="m-pitch">
+          <h1>Don&rsquo;t be lost at the show (or festival), <span class="franc-text">franc</span> helps you easily find and meet up with friends.</h1>
+          <p>Coming soon for the summer festival scene! Want updates?</p>
+          <form class="m-form-sign-up">
+            <button class="m-button m-button--white">Sign up</button>
+            <span>
+              <label class="is-hidden" for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="Your email&#8230;">
   <!-- the error should only happen if: the person enters an invalid email. If Jill has already sent us her email, DO NOT duplicate it but handle the form as if she sent an approved email and show the success section. Once the user focuses the input to try again remove the error by reapplying the is-hidden class to the m-error div. -->
-            <div class="is-hidden m-error">
-              <p>Oops! This isn't a valid email.</p>
-            </div>
-          </div>
-          <button class="m-button m-button--white">Sign up</button>
-        </form>
+              <div class="is-hidden m-error">
+                <p>Oops! This isn't a valid email.</p>
+              </div>
+            </span>
+          </form>
+        </div>
+        <a href="for-festivals/" class="m-button--light-blue" title="for festival owners and promoters" role="top-nav">For festivals</a>
       </div>
-      <a href="for-festivals/" class="m-button m-button--light-blue" title="for festival owners and promoters">For festivals</a>
-      <a href="#" class="m-button m-button--large m-button--white" title="learn more about franc">Learn more</a>
+      <div class="bottom-button">
+        <a href="#" class="m-button--large" title="learn more about franc" role="start-parallax">Learn more</a>
+      </div>
     </header>
 
-    <div class="">
-      <p>We&rsquo;ve all been there… some of your group wants to groove at the funk show, others wants to have a bluegrass hoedown, while a few are arriving later this evening and you ALL want to meet for the headliner! How do you make sure this all goes down without a hitch? <span class="franc-text">franc!</span></p>
+    <div class="m-wrapper--white">
+      <div class="m-mod--story">
+        <p>We&rsquo;ve all been there… some of your group wants to groove at the funk show, others wants to have a bluegrass hoedown, while a few are arriving later this evening and you ALL want to meet for the headliner! How do you make sure this all goes down without a hitch? <span class="franc-text">franc!</span></p>
 
-      <p><span class="franc-text">franc</span> makes finding and meeting up with friends at shows or festivals easy.</p>
+        <p><span class="franc-text">franc</span> makes finding and meeting up with friends at shows or festivals easy.</p>
+      </div>
+      <div id="story-bg" class="image"></div>
     </div>
 
-    <div class="">
-      <h2>Who do you see shows with?</h2>
-      <p>Add your friends so you can easily find each other at shows or festivals. Don&rsquo;t worry… you have control over who can find you using <span class="franc-text">franc</span>.<p>
-      <img src="_assets/images/franc-search-result.png" />
-      <img src="_assets/images/real-franc-animate.png" />
+    <div class="m-wrapper">
+      <div class="full-width">
+        <div class="m-mod--right">
+          <h2>Who do you see shows with?</h2>
+          <p>Add your friends so you can easily find each other at shows or festivals. Don&rsquo;t worry… you have control over who can find you using <span class="franc-text">franc</span>.</p>
+        </div>
+        <div id="add-sh" class="image--screenshot"></div>
+      </div>
+      <div id="white-franc" class="image"></div>
     </div>
 
-    <div class="">
-      <h2>Where is everyone?</h2>
-      <p>You&rsquo;ll always know where your friends are at shows or festivals using <span class="franc-text">franc&rsquo;s</span> map.</p>
+    <div class="m-wrapper--white">
+      <div class="full-width">
+        <div class="m-mod--left">
+          <h2>Where is everyone?</h2>
+          <p>You&rsquo;ll always know where your friends are at shows or festivals using <span class="franc-text">franc&rsquo;s</span> map.</p>
+        </div>
+        <div id="map-sh" class="image--screenshot"></div>
+      </div>
+      <div id="marker-1" class="image"></div>
+      <div id="marker-2" class="image"></div>
+      <div id="marker-3" class="image"></div>
+      <div id="marker-4" class="image"></div>
+      <div id="marker-5" class="image"></div>
     </div>
 
-    <div class="">
-      <h2>Want to meet up with someone?</h2>
-      <p>It&rsquo;s easy to meet up with someone using <span class="franc-text">franc</span>. Just ask them to “stay put” and use the map to meet up so you all can rock out!</p>
+    <div class="m-wrapper">
+      <div class="full-width">
+        <div class="m-mod--right">
+          <h2>Want to meet up with someone?</h2>
+          <p>It&rsquo;s easy to meet up with someone using <span class="franc-text">franc</span>. Just ask them to “stay put” and use the map to meet up so you all can rock out!</p>
+        </div>
+        <div id="stay-put-sh" class="image--screenshot"></div>
+      </div>
+      <div id="met-up-group" class="image"></div>
     </div>
 
     <footer>
