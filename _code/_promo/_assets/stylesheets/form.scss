@@ -1,0 +1,33 @@
+.m-form-sign-up {
+  @include clearfix;
+  width: ($column * 4) + ($gutter * 3);
+
+  > .m-button { float: right;}
+}
+
+.m-form-sign-up > span {
+  display: block;
+  padding-right: $gutter;
+  overflow: hidden;
+
+  > input {
+    @include font-size(2);
+    @include placeholder { color: white;} 
+    @include transition (all $animation-duration);
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    line-height: $baseline * 6 - 3;
+    color: white;
+    &:hover { 
+      @include transition (all $animation-duration);
+      border-color: $pink;
+    }
+    &:focus { 
+      @include placeholder { color: transparentize(white, 0.5);}
+      @include transition (all $animation-duration);
+      border-color: $pink;
+    }     
+  }
+}

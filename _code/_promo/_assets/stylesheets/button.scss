@@ -1,0 +1,35 @@
+.m-button {
+  @include font-size(2);
+  @include transition (all $animation-duration);
+  display: inline-block;
+  padding: 0 $base-width * 2 $baseline / 3;
+  border-radius: $base-width - 1;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  line-height: $baseline * 6 - 4;
+
+  &:hover {
+    @include transition (all $animation-duration);
+    color: $pink;
+    border-color: $pink;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.12);
+  }
+
+  &:focus { }
+}
+
+.m-button--large {
+  @extend .m-button;
+  @include font-size(2.4);
+  padding: 0 $base-width * 4;
+  line-height: $baseline * 7 - 2;
+  font-weight: $font-light;
+}
+
+.m-button--light-blue {
+  @extend .m-button;
+  @include font-size(1.6);
+  border-color: $lighter-blue;
+  color: $lighter-blue;
+}

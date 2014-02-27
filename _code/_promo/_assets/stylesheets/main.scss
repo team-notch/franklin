@@ -1,0 +1,122 @@
+@import 'bourbon';
+@import 'neat';
+@import 'base';
+@import 'constants';
+@import 'header';
+@import 'button';
+@import 'form';
+
+.franc-text {
+  color: $pink;
+  font-weight: $font-normal;
+}
+
+.m-wrapper {
+  @include clearfix;
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+.m-wrapper--white {
+  @extend .m-wrapper;
+  background: white;
+}
+
+.full-width {
+  position: relative;
+  width: ($column * 8) + ($gutter * 7);
+  margin: 0 auto;
+  padding: ($baseline * 19) 0;
+}
+
+.full-width--header {
+  @extend .full-width;
+  padding: 0;
+}
+
+.m-mod {
+  @include transition (all $animation-duration);
+  width: ($column * 4) + ($gutter * 3); 
+  > h2 {
+    @include font-size(3.2);
+    margin-top: $baseline * 23;
+    line-height: 1.3125;
+  }
+  > p {
+    @include font-size(2);
+    ine-height: 1.25; // 25px
+    text-shadow: 1px 1px 0px white, -1px -1px 1px white;
+  }
+}
+
+.m-mod--story {
+  @extend .m-mod;
+  width: ($column * 6) + ($gutter * 5);
+  margin: 0 auto;
+  margin-bottom: -110px;
+  padding-top: $baseline * 12 - 5;
+  padding-bottom: 0;
+  background: white;
+  > p { 
+    @include font-size(3.2);
+    margin-bottom: $baseline * 3;
+    font-weight: $font-light;
+    line-height: 1.3125;
+    &:last-child { margin-bottom: 0;}
+  }
+}
+
+.m-mod--right { 
+  @extend .m-mod;
+  float: right;
+}
+
+.m-mod--left { 
+  @extend .m-mod;
+  float: left;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.image--screenshot {
+  @extend .image;
+  height: 614px;
+}
+
+#story-bg {
+  height: 281px;
+  background-image: url('../images/story-image@2x.png');
+  background-size: 1200px 281px;
+  @media screen and (min-width: 1200px) {
+    height: 371px;
+    background-size: cover;
+  }
+}
+
+#add-sh {
+  background-image: url('../images/add-friends@2x.png');
+  background-size: 374px 614px;
+}
+
+#map-sh {
+  background-image: url('../images/use-the-map@2x.png');
+  background-position: right;
+  background-size: 374px 614px;
+}
+
+#stay-put-sh {
+  background-image: url('../images/ask-for-a-stay-put@2x.png');
+  background-size: 374px 614px;
+}
+
+.is-hidden {
+  opacity: 0;
+  display: none;
+}

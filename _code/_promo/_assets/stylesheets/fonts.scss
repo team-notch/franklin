@@ -1,0 +1,12 @@
+@import "bourbon";
+
+// Source Sans 
+
+@include font-face("Source Sans", "../fonts/sourcesanspro-light", 300, normal);
+@include font-face("Source Sans", "../fonts/sourcesanspro-regular", 400, normal);
+@include font-face("Source Sans", "../fonts/sourcesanspro-semibold", 600, normal);
+
+// Flaticons Social
+// https://flaticons.co/
+
+@include font-face("Flaticons Stroke", "../fonts/flaticons-social", normal, normal);
