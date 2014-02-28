@@ -469,74 +469,113 @@ a[role=top-nav] {
   color: #8adff5;
 }
 
-.m-form-sign-up {
+.m-form-sign-up, .m-form-sign-up--footer {
   *zoom: 1;
   width: 460px;
 }
-.m-form-sign-up:before, .m-form-sign-up:after {
+.m-form-sign-up:before, .m-form-sign-up--footer:before, .m-form-sign-up:after, .m-form-sign-up--footer:after {
   content: " ";
   display: table;
 }
-.m-form-sign-up:after {
+.m-form-sign-up:after, .m-form-sign-up--footer:after {
   clear: both;
 }
-.m-form-sign-up > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up > .m-button--light-blue {
+.m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue {
   float: right;
 }
 
-.m-form-sign-up > span {
+.m-form-sign-up > span, .m-form-sign-up--footer > span {
   display: block;
   padding-right: 20px;
   overflow: hidden;
 }
-.m-form-sign-up > span > input {
+.m-form-sign-up > span > input, .m-form-sign-up--footer > span > input {
   font-size: 20px;
   font-size: 2rem;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
   width: 100%;
+  padding-bottom: 4px;
   background: transparent;
   border: none;
   border-bottom: 1px solid white;
-  line-height: 33px;
+  line-height: 30px;
   color: white;
 }
-.m-form-sign-up > span > input::-webkit-input-placeholder {
+.m-form-sign-up > span > input::-webkit-input-placeholder, .m-form-sign-up--footer > span > input::-webkit-input-placeholder {
   color: white;
 }
-.m-form-sign-up > span > input:-moz-placeholder {
+.m-form-sign-up > span > input:-moz-placeholder, .m-form-sign-up--footer > span > input:-moz-placeholder {
   color: white;
 }
-.m-form-sign-up > span > input::-moz-placeholder {
+.m-form-sign-up > span > input::-moz-placeholder, .m-form-sign-up--footer > span > input::-moz-placeholder {
   color: white;
 }
-.m-form-sign-up > span > input:-ms-input-placeholder {
+.m-form-sign-up > span > input:-ms-input-placeholder, .m-form-sign-up--footer > span > input:-ms-input-placeholder {
   color: white;
 }
-.m-form-sign-up > span > input:hover {
+.m-form-sign-up > span > input:hover, .m-form-sign-up--footer > span > input:hover {
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
   border-color: #f665b2;
 }
-.m-form-sign-up > span > input:focus {
+.m-form-sign-up > span > input:focus, .m-form-sign-up--footer > span > input:focus {
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
   border-color: #f665b2;
 }
-.m-form-sign-up > span > input:focus::-webkit-input-placeholder {
+.m-form-sign-up > span > input:focus::-webkit-input-placeholder, .m-form-sign-up--footer > span > input:focus::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.m-form-sign-up > span > input:focus:-moz-placeholder {
+.m-form-sign-up > span > input:focus:-moz-placeholder, .m-form-sign-up--footer > span > input:focus:-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.m-form-sign-up > span > input:focus::-moz-placeholder {
+.m-form-sign-up > span > input:focus::-moz-placeholder, .m-form-sign-up--footer > span > input:focus::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-.m-form-sign-up > span > input:focus:-ms-input-placeholder {
+.m-form-sign-up > span > input:focus:-ms-input-placeholder, .m-form-sign-up--footer > span > input:focus:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.m-form-sign-up--footer {
+  width: 480px;
+}
+
+.m-form-sign-up--footer > span > input {
+  padding: 0 15px 0;
+  background: white;
+  border: 1px solid #d5d9dd;
+  line-height: 36px;
+}
+.m-form-sign-up--footer > span > input::-webkit-input-placeholder {
+  color: #d5d9dd;
+}
+.m-form-sign-up--footer > span > input:-moz-placeholder {
+  color: #d5d9dd;
+}
+.m-form-sign-up--footer > span > input::-moz-placeholder {
+  color: #d5d9dd;
+}
+.m-form-sign-up--footer > span > input:-ms-input-placeholder {
+  color: #d5d9dd;
+}
+.m-form-sign-up--footer > span > input:hover {
+  border-color: #60d3f0;
+}
+.m-form-sign-up--footer > span > input:focus::-webkit-input-placeholder {
+  color: rgba(213, 217, 221, 0.5);
+}
+.m-form-sign-up--footer > span > input:focus:-moz-placeholder {
+  color: rgba(213, 217, 221, 0.5);
+}
+.m-form-sign-up--footer > span > input:focus::-moz-placeholder {
+  color: rgba(213, 217, 221, 0.5);
+}
+.m-form-sign-up--footer > span > input:focus:-ms-input-placeholder {
+  color: rgba(213, 217, 221, 0.5);
 }
 
 .franc-text {
@@ -578,18 +617,19 @@ a[role=top-nav] {
   -moz-transition: all 300ms;
   transition: all 300ms;
   width: 460px;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75), -1px -1px 1px rgba(255, 255, 255, 0.75);
 }
 .m-mod > h2, .m-mod--story > h2, .m-mod--right > h2, .m-mod--left > h2 {
   font-size: 32px;
   font-size: 3.2rem;
-  margin-top: 138px;
+  margin: 130px 0 6px;
   line-height: 1.3125;
 }
 .m-mod > p, .m-mod--story > p, .m-mod--right > p, .m-mod--left > p {
   font-size: 20px;
   font-size: 2rem;
-  ine-height: 1.25;
-  text-shadow: 1px 1px 0px white, -1px -1px 1px white;
+  line-height: 1.25;
+  color: #959eac;
 }
 
 .m-mod--story {
@@ -628,7 +668,8 @@ a[role=top-nav] {
 }
 
 .image--screenshot {
-  height: 614px;
+  height: 620px;
+  background-size: 377px 620px;
 }
 
 #story-bg {
@@ -645,18 +686,54 @@ a[role=top-nav] {
 
 #add-sh {
   background-image: url("../images/add-friends@2x.png");
-  background-size: 374px 614px;
 }
 
 #map-sh {
   background-image: url("../images/use-the-map@2x.png");
   background-position: right;
-  background-size: 374px 614px;
 }
 
 #stay-put-sh {
   background-image: url("../images/ask-for-a-stay-put@2x.png");
-  background-size: 374px 614px;
+}
+
+#white-franc {
+  float: right;
+  width: 274px;
+  height: 311px;
+  margin-top: -197px;
+  margin-right: 20px;
+  background-image: url("../images/white-franc@2x.png");
+  background-size: 274px 311px;
+}
+
+#met-up-group {
+  height: 374px;
+  margin-top: -374px;
+  background-image: url("../images/together-at-last@2x.png");
+  background-position: right;
+  background-size: 614px 374px;
+}
+
+footer {
+  background: white;
+}
+
+.m-update {
+  width: 700px;
+}
+.m-update > h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  margin: 0 0 28px;
+  line-height: 1.3125;
+}
+.m-update > p {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #959eac;
+  margin-bottom: 48px;
 }
 
 .is-hidden {

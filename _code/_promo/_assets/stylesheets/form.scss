@@ -15,10 +15,11 @@
     @include placeholder { color: white;} 
     @include transition (all $animation-duration);
     width: 100%;
+    padding-bottom: $baseline - 2;
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
-    line-height: $baseline * 6 - 3;
+    line-height: $baseline * 5;
     color: white;
     &:hover { 
       @include transition (all $animation-duration);
@@ -31,3 +32,22 @@
     }     
   }
 }
+
+.m-form-sign-up--footer {
+  @extend .m-form-sign-up;
+  width: ($column * 4) + ($gutter * 4);
+}
+
+.m-form-sign-up--footer > span {
+  > input {
+    @include placeholder { color: $gray;} 
+    padding: 0 ($base-width * 3) 0;
+    background: white;
+    border: 1px solid $gray;
+    line-height: $baseline * 6;
+    &:hover { border-color: $blue;}
+    &:focus { @include placeholder { color: transparentize($gray, 0.5);}}
+  }
+}
+
+

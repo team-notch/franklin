@@ -37,16 +37,17 @@
 
 .m-mod {
   @include transition (all $animation-duration);
-  width: ($column * 4) + ($gutter * 3); 
+  width: ($column * 4) + ($gutter * 3);
+  text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
   > h2 {
     @include font-size(3.2);
-    margin-top: $baseline * 23;
+    margin: ($baseline * 21 + 4) 0 $baseline;
     line-height: 1.3125;
   }
   > p {
     @include font-size(2);
-    ine-height: 1.25; // 25px
-    text-shadow: 1px 1px 0px white, -1px -1px 1px white;
+    line-height: 1.25; // 25px
+    color: $darker-gray;
   }
 }
 
@@ -87,7 +88,8 @@
 
 .image--screenshot {
   @extend .image;
-  height: 614px;
+  height: 620px;
+  background-size: 377px 620px;
 }
 
 #story-bg {
@@ -102,19 +104,54 @@
 
 #add-sh {
   background-image: url('../images/add-friends@2x.png');
-  background-size: 374px 614px;
 }
 
 #map-sh {
   background-image: url('../images/use-the-map@2x.png');
   background-position: right;
-  background-size: 374px 614px;
 }
 
 #stay-put-sh {
   background-image: url('../images/ask-for-a-stay-put@2x.png');
-  background-size: 374px 614px;
 }
+
+#white-franc {
+  float: right;
+  width: 274px;
+  height: 311px;
+  margin-top: -311 + ($baseline * 19);
+  margin-right: $gutter;
+  background-image: url('../images/white-franc@2x.png');
+  background-size: 274px 311px;
+}
+
+#met-up-group {
+  height: 374px;
+  margin-top: -374px;
+  background-image: url('../images/together-at-last@2x.png');
+  background-position: right;
+  background-size: 614px 374px;
+}
+
+footer {
+  background: white;
+}
+
+.m-update {
+  width: ($column * 6) + ($gutter * 5);
+  > h3 {
+    @include font-size(3.2);
+    margin: 0 0 ($baseline * 4 + 4);
+    line-height: 1.3125;
+  }
+  > p {
+    @include font-size(2);
+    line-height: 1.25; // 25px
+    color: $darker-gray;
+    margin-bottom: ($baseline * 8);
+  }
+}
+
 
 .is-hidden {
   opacity: 0;
