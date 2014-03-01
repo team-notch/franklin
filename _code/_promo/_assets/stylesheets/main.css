@@ -668,7 +668,8 @@ a[role=top-nav] {
 }
 
 .image--screenshot {
-  height: 620px;
+  width: 300px;
+  height: auto;
   background-size: 377px 620px;
 }
 
@@ -682,19 +683,6 @@ a[role=top-nav] {
     height: 371px;
     background-size: cover;
   }
-}
-
-#add-sh {
-  background-image: url("../images/add-friends@2x.png");
-}
-
-#map-sh {
-  background-image: url("../images/use-the-map@2x.png");
-  background-position: right;
-}
-
-#stay-put-sh {
-  background-image: url("../images/ask-for-a-stay-put@2x.png");
 }
 
 #white-franc {
