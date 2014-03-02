@@ -36,7 +36,7 @@ var app = {
 
     var mapOptions = {
         center: myLatLng,
-        zoom: 15,
+        zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true
     };
