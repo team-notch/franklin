@@ -1,14 +1,31 @@
 .m-form-sign-up {
   @include clearfix;
-  width: ($column * 4) + ($gutter * 3);
+  position: relative;
+  width: 100%;
+  @media screen and (min-width: $bp-small) {
+    width: ($column * 4) + ($gutter * 3);
+  }
 
-  > .m-button { float: right;}
+  > .m-button {
+    @include position(absolute, ($column + ($baseline + 3)) 0 0 50%);
+    margin-left: -42.5px; // half of button width
+    @media screen and (min-width: $bp-small) {
+      position: relative;
+      float: right;
+    }
+  }
 }
 
 .m-form-sign-up > span {
+  @include position(absolute, ($column / 2) 0 0 0);
   display: block;
-  padding-right: $gutter;
+  width: 100%;
   overflow: hidden;
+
+  @media screen and (min-width: $bp-small) {
+    position: relative;
+    padding-right: $gutter;
+  }
 
   > input {
     @include font-size(2);
@@ -30,6 +47,9 @@
       @include transition (all $animation-duration);
       border-color: $pink;
     }     
+  }
+  @media screen and (min-width: $bp) {
+
   }
 }
 

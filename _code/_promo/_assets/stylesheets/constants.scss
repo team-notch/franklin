@@ -122,3 +122,12 @@ $gw-gutter: $gutter;
 // ANIMATION
 
 $animation-duration: 300ms;
+
+// BREAKPOINTS
+
+$bp-largest:  $column * 20;
+$bp-larger:   $column * 16;
+$bp-large:    $column * 12;
+$bp:          $column * 9;
+$bp-small:    $column * 6;
+$bp-smaller:  $column * 4;

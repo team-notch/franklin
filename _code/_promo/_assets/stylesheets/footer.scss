@@ -1,0 +1,104 @@
+footer {
+  position: relative;
+  margin-bottom: $baseline * 2;
+  background: white;
+}
+
+.m-update {
+  width: ($column * 6) + ($gutter * 5);
+  //margin-bottom: $baseline * 17;
+  > h3 {
+    @include font-size(3.2);
+    margin: 0 0 ($baseline * 10);
+    line-height: 1.3125;
+  }
+  > p {
+    @include font-size(2);
+    line-height: 1.25; // 25px
+    color: $darker-gray;
+    margin-bottom: ($baseline * 8);
+  }
+}
+
+.contact {
+  // margin-bottom: $baseline * 6;
+}
+
+.contact-link {
+  @include font-size(1.2);
+  @include transition (all $animation-duration ease-in-out);
+  position: relative;
+  margin-right: $baseline * 5;
+  padding-top: $baseline * 5 + 1;
+  color: $gray;
+  text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  &:before {
+    @include font-size(2.4);
+    @include position(absolute, 0px 0px 0 0);
+    width: 100%;
+    content: "\e7d7";
+    font-family: $font-stack-social;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:last-child { margin-right: 0;}
+}
+
+.contact-link--email {
+  @extend .contact-link;
+  &:before {
+    font-family: $font-stack-icons;
+    content: "\e494";
+  }
+}
+
+.contact-link--twitter {
+  @extend .contact-link;
+  &:before {
+    content: "\e7d1";
+  }
+}
+
+.contact-link--dribbble {
+  @extend .contact-link;
+  &:before {
+    content: "\e7d7";
+  }
+}
+
+.m-subnav {
+  @include font-size(2);
+  margin-bottom: $baseline * 3 - 4;
+  line-height: 1.25; // 25px
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  > a {
+    display: inline-block;
+    margin-right: $baseline * 5;
+    color: $dark-gray;
+    &:last-child { margin-right: 0;}
+  }
+}
+
+small {
+  @include font-size(1.4);
+  line-height: 0.77777778; // 18px
+  color: $light-gray;
+}
+
+.m-divider {
+  margin-bottom: $baseline * 9 - 2;
+  display: block;
+  border: 1px dashed $lightest-gray;
+}
+
+.m-divider--small-margin {
+  @extend .m-divider;
+  margin-bottom: $baseline * 3.5;
+}

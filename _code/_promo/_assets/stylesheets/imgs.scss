@@ -1,0 +1,92 @@
+.image {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.image--screenshot {
+  @extend .image;
+  width: ($column * 2.75);
+  height: auto;
+  background-size: 377px 620px;
+}
+
+.image--marker {
+  @extend .image;
+  width: auto;
+}
+
+#story-bg {
+  height: 281px;
+  background-image: url('../images/story-image@2x.png');
+  background-size: 1200px 281px;
+  @media screen and (min-width: 1200px) {
+    height: 371px;
+    background-size: cover;
+  }
+}
+
+#add-sh {
+  // background-image: url('../images/add-friends@2x.png');
+}
+
+#map-sh {
+  float: right;
+  // background-image: url('../images/use-the-map@2x.png');
+  // background-position: right;
+}
+
+#stay-put-sh {
+  //background-image: url('../images/ask-for-a-stay-put@2x.png');
+}
+
+#white-franc {
+  @include position(absolute, 0 0px 0px 0);
+  height: 311px;
+  background-image: url('../images/white-franc@2x.png');
+  background-size: 274px 311px;
+  background-position: bottom right;
+}
+
+#gray-franc {
+  @include position(absolute, 0 $gutter 0px 0);
+  height: 384px;
+  background-image: url('../images/gray-franc@2x.png');
+  background-size: 205px 384px;
+  background-position: bottom right;
+}
+
+#met-up-group {
+  height: 374px;
+  margin-top: -374px;
+  background-image: url('../images/together-at-last@2x.png');
+  background-position: right;
+  background-size: 614px 374px;
+}
+
+#marker-1 {
+  @include position(absolute, 0 0 (-$baseline) 0px);
+  height: $column + $baseline;
+}
+
+#marker-2 {
+  @include position(absolute, 0 0px ($baseline * 2) 0);
+  height: $column - ($gutter - 1);
+}
+
+#marker-3 {
+  @include position(absolute, 0 0 ($baseline * 18.6666667) ($baseline * 60));
+  height: $baseline * 11 + 4;
+}
+
+#marker-4 {
+  @include position(absolute, 0 0 ($baseline * 46) ($baseline * 30));
+  height: $baseline * 9;
+}
+
+#marker-5 {
+  @include position(absolute, 0 0 ($baseline * 57.8333333) ($baseline * 90));
+  height: $baseline * 6 + 1;
+}
