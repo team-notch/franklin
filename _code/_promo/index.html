@@ -16,7 +16,7 @@ helps you easily find and meet up with friends." />
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
+    <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
@@ -25,7 +25,7 @@ helps you easily find and meet up with friends." />
         <div class="m-logo">
           <h1>franc... never be lost at a show</h1>
         </div>
-        <div class="m-pitch">
+        <div class="m-pitch" data-0="opacity:1.0;" data-300="opacity:0;">
           <h1>Don&rsquo;t be lost at the show (or festival), <span class="franc-text">franc</span> helps you easily find and meet up with friends.</h1>
           <p>Coming soon for the summer festival scene! Want updates?</p>
           <form class="m-form-sign-up">
@@ -52,7 +52,7 @@ helps you easily find and meet up with friends." />
 
         <p><span class="franc-text">franc</span> makes finding and meeting up with friends at shows or festivals easy.</p>
       </div>
-      <div id="story-bg" class="image"></div>
+      <div id="story-bg" class="image" data-280="margin-top: -200px;" data-620="margin-top: 0;"></div>
     </div>
 
     <div class="m-wrapper">
@@ -61,8 +61,8 @@ helps you easily find and meet up with friends." />
           <h2>Who do you see shows with?</h2>
           <p>Add your friends so you can easily find each other at shows or festivals. Don&rsquo;t worry… you have control over who can find you using <span class="franc-text">franc</span>.</p>
         </div>
-        <img src="_assets/images/add-friends@2x.png" id="add-sh" class="image--screenshot"/>
-        <div id="white-franc" class="image"></div>
+        <img src="_assets/images/add-friends@2x.png" id="add-sh" class="image--screenshot" data-1000="opacity: 0; transform[sqrt]:scale(0.85);" data-bottom="opacity:1.0; transform[sqrt]:scale(1);" />
+        <div id="white-franc" class="image" data-0="margin-right: -281px;" data-bottom="margin-right: 0;"></div>
       </div>
       
     </div>
@@ -95,7 +95,7 @@ helps you easily find and meet up with friends." />
     </div>
 
     <footer>
-      <div class="full-width">
+      <div class="full-width--update">
         <div class="m-update">
           <h3><span class="franc-text">franc</span> update&#8230;</h3>
           <p>We are working hard to get the first testable version in your hands. If you would like to be one of select few testing <span class="franc-text">franc</span> then fill out the below.</p>
@@ -111,19 +111,25 @@ helps you easily find and meet up with friends." />
           </form>
         </div>
       </div>
+
       <div class="m-divider"></div>
-      <div class="full-width--footer">
+
+      <div class="full-width--contact">
         <div class="contact">
-          <a href="#" class="contact-link--email" target="_blank" title="email us">Email</a>
+          <a href="mailto:james@findranc.com" class="contact-link--email" target="_blank" title="email us">Email</a>
           <a href="#" class="contact-link--twitter" target="_blank" title="keep up on the latest happenings">Twitter</a>
           <a href="#" class="contact-link--dribbble" target="_blank" title="view franc's latest design work">Dribbble</a>
         </div>
-
+      
         <div class="social">
           <!-- facebook like site -->
           <!-- tweet site -->
         </div>
+      </div>
 
+      <div class="m-divider--small-margin"></div>
+
+      <div class="full-width--footer">
         <div class="m-subnav">
           <a href="for-festivals/" title="for festival owners and promoters">For festivals</a>
           <a href="mailto:jack@findfranc.com" title="email us for help">Support</a>
@@ -132,9 +138,10 @@ helps you easily find and meet up with friends." />
 
         <small>&copy;2013 notch llc, all rights reserved. franc is a notch creation.</small>
       </div>
+      <div id="gray-franc" class="image"></div>
     </footer>
-    <script src="_assets/scripts/main.js"></script>
     <script src="_assets/scripts/skrollr.min.js"></script>
+    <script src="_assets/scripts/main.js"></script>
   </body>
 </html>
 
