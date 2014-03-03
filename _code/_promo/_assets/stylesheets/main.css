@@ -361,18 +361,26 @@ textarea {
 }
 
 @font-face {
-  font-family: "Flaticons Stroke";
+  font-family: "Flaticons Social";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/flaticons-social.eot");
-  src: url("../fonts/flaticons-social.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticons-social.woff") format("woff"), url("../fonts/flaticons-social.ttf") format("truetype"), url("../fonts/flaticons-social.svg#Flaticons Stroke") format("svg");
+  src: url("../fonts/flaticons-social.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticons-social.woff") format("woff"), url("../fonts/flaticons-social.ttf") format("truetype"), url("../fonts/flaticons-social.svg#Flaticons Social") format("svg");
+}
+
+@font-face {
+  font-family: "Flaticons Stroke";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/flaticons-stroke.eot");
+  src: url("../fonts/flaticons-stroke.eot?#iefix") format("embedded-opentype"), url("../fonts/flaticons-stroke.woff") format("woff"), url("../fonts/flaticons-stroke.ttf") format("truetype"), url("../fonts/flaticons-stroke.svg#Flaticons Stroke") format("svg");
 }
 
 header {
   position: relative;
   height: 799px;
   padding: 30px 0;
-  background: white url("/_assets/images/individual-home-bg.jpg") no-repeat center center;
+  background: white url("/_assets/images/individual-home-bg.jpg") no-repeat center 0 fixed;
   border-bottom: 2px solid #616975;
   overflow: hidden;
   text-align: center;
@@ -431,7 +439,7 @@ a[role=top-nav] {
   text-shadow: 0px 1px 1px #60d3f0;
 }
 
-.m-button, .m-button--large, .m-button--light-blue {
+.m-button, .m-button--large, .m-button--light-blue, .m-button--primary {
   font-size: 20px;
   font-size: 2rem;
   -webkit-transition: all 300ms;
@@ -445,7 +453,7 @@ a[role=top-nav] {
   color: white;
   line-height: 32px;
 }
-.m-button:hover, .m-button--large:hover, .m-button--light-blue:hover {
+.m-button:hover, .m-button--large:hover, .m-button--light-blue:hover, .m-button--primary:hover {
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
@@ -469,6 +477,20 @@ a[role=top-nav] {
   color: #8adff5;
 }
 
+.m-button--primary {
+  background: #75dbf5;
+  background-image: -webkit-linear-gradient( rgba(255, 255, 255, 0.16) 0, rgba(255, 255, 255, 0) 50%);
+  background-image: linear-gradient( rgba(255, 255, 255, 0.16) 0, rgba(255, 255, 255, 0) 50%);
+  border: 1px solid #60d3f0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), inset 0 0 0 1px #8adff5;
+  text-shadow: 0 1px 0 #60d3f0;
+}
+.m-button--primary:hover {
+  color: white;
+  border-color: #44ccee;
+  background: #59d4f3;
+}
+
 .m-form-sign-up, .m-form-sign-up--footer {
   *zoom: 1;
   width: 460px;
@@ -480,7 +502,7 @@ a[role=top-nav] {
 .m-form-sign-up:after, .m-form-sign-up--footer:after {
   clear: both;
 }
-.m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue {
+.m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue, .m-form-sign-up > .m-button--primary, .m-form-sign-up--footer > .m-button--primary {
   float: right;
 }
 
@@ -548,6 +570,7 @@ a[role=top-nav] {
   padding: 0 15px 0;
   background: white;
   border: 1px solid #d5d9dd;
+  color: #616975;
   line-height: 36px;
 }
 .m-form-sign-up--footer > span > input::-webkit-input-placeholder {
@@ -562,8 +585,11 @@ a[role=top-nav] {
 .m-form-sign-up--footer > span > input:-ms-input-placeholder {
   color: #d5d9dd;
 }
-.m-form-sign-up--footer > span > input:hover {
+.m-form-sign-up--footer > span > input:hover, .m-form-sign-up--footer > span > input:focus {
   border-color: #60d3f0;
+}
+.m-form-sign-up--footer > span > input:focus {
+  color: #959eac;
 }
 .m-form-sign-up--footer > span > input:focus::-webkit-input-placeholder {
   color: rgba(213, 217, 221, 0.5);
@@ -601,21 +627,33 @@ a[role=top-nav] {
   background: white;
 }
 
-.full-width, .full-width--header {
+.full-width, .full-width--header, .full-width--footer {
+  *zoom: 1;
   position: relative;
   width: 940px;
   margin: 0 auto;
   padding: 114px 0;
+}
+.full-width:before, .full-width--header:before, .full-width--footer:before, .full-width:after, .full-width--header:after, .full-width--footer:after {
+  content: " ";
+  display: table;
+}
+.full-width:after, .full-width--header:after, .full-width--footer:after {
+  clear: both;
 }
 
 .full-width--header {
   padding: 0;
 }
 
+.full-width--footer {
+  padding: 0 0 114px 0;
+}
+
 .m-mod, .m-mod--story, .m-mod--right, .m-mod--left {
-  -webkit-transition: all 300ms;
-  -moz-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   width: 460px;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75), -1px -1px 1px rgba(255, 255, 255, 0.75);
 }
@@ -659,7 +697,7 @@ a[role=top-nav] {
   float: left;
 }
 
-.image, .image--screenshot {
+.image, .image--screenshot, .image--marker {
   display: block;
   width: 100%;
   background-color: transparent;
@@ -668,9 +706,13 @@ a[role=top-nav] {
 }
 
 .image--screenshot {
-  width: 300px;
+  width: 275px;
   height: auto;
   background-size: 377px 620px;
+}
+
+.image--marker {
+  width: auto;
 }
 
 #story-bg {
@@ -685,14 +727,18 @@ a[role=top-nav] {
   }
 }
 
-#white-franc {
+#map-sh {
   float: right;
-  width: 274px;
+}
+
+#white-franc {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
   height: 311px;
-  margin-top: -197px;
-  margin-right: 20px;
   background-image: url("../images/white-franc@2x.png");
   background-size: 274px 311px;
+  background-position: bottom right;
 }
 
 #met-up-group {
@@ -701,6 +747,41 @@ a[role=top-nav] {
   background-image: url("../images/together-at-last@2x.png");
   background-position: right;
   background-size: 614px 374px;
+}
+
+#marker-1 {
+  position: absolute;
+  bottom: -6px;
+  left: 0px;
+  height: 106px;
+}
+
+#marker-2 {
+  position: absolute;
+  right: 0px;
+  bottom: 12px;
+  height: 81px;
+}
+
+#marker-3 {
+  position: absolute;
+  bottom: 112.0px;
+  left: 360px;
+  height: 70px;
+}
+
+#marker-4 {
+  position: absolute;
+  bottom: 276px;
+  left: 180px;
+  height: 54px;
+}
+
+#marker-5 {
+  position: absolute;
+  bottom: 347.0px;
+  left: 540px;
+  height: 37px;
 }
 
 footer {
@@ -713,7 +794,7 @@ footer {
 .m-update > h3 {
   font-size: 32px;
   font-size: 3.2rem;
-  margin: 0 0 28px;
+  margin: 0 0 60px;
   line-height: 1.3125;
 }
 .m-update > p {
@@ -722,6 +803,87 @@ footer {
   line-height: 1.25;
   color: #959eac;
   margin-bottom: 48px;
+}
+
+.contact {
+  margin-bottom: 36px;
+}
+
+.contact-link, .contact-link--email, .contact-link--twitter, .contact-link--dribbble {
+  font-size: 12px;
+  font-size: 1.2rem;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  margin-right: 30px;
+  padding-top: 30px;
+  color: #d5d9dd;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75), -1px -1px 1px rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact-link:before, .contact-link--email:before, .contact-link--twitter:before, .contact-link--dribbble:before {
+  font-size: 24px;
+  font-size: 2.4rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  content: "\e7d7";
+  font-family: "Flaticons Social", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+.contact-link:last-child, .contact-link--email:last-child, .contact-link--twitter:last-child, .contact-link--dribbble:last-child {
+  margin-right: 0;
+}
+
+.contact-link--email:before {
+  font-family: "Flaticons Stroke", sans-serif;
+  content: "\e494";
+}
+
+.contact-link--twitter:before {
+  content: "\e7d1";
+}
+
+.contact-link--dribbble:before {
+  content: "\e7d7";
+}
+
+.m-subnav {
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.m-subnav > a {
+  display: inline-block;
+  margin-right: 30px;
+  color: #b8c0cc;
+}
+.m-subnav > a:last-child {
+  margin-right: 0;
+}
+
+small {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 0.77777778;
+  color: #e1e6ea;
+}
+
+.m-divider {
+  margin-bottom: 60px;
+  display: block;
+  border: 1px dashed #f5f9ff;
 }
 
 .is-hidden {
