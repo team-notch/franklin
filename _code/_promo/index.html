@@ -33,7 +33,6 @@ helps you easily find and meet up with friends." />
             <span>
               <label class="is-hidden" for="email">Email</label>
               <input id="email" type="email" name="email" placeholder="Enter your email&#8230;">
-  <!-- the error should only happen if: the person enters an invalid email. If Jill has already sent us her email, DO NOT duplicate it but handle the form as if she sent an approved email and show the success section. Once the user focuses the input to try again remove the error by reapplying the is-hidden class to the m-error div. -->
               <div class="is-hidden m-error">
                 <p>Oops! This isn't a valid email.</p>
               </div>
@@ -75,12 +74,13 @@ helps you easily find and meet up with friends." />
           <p>You&rsquo;ll always know where your friends are at shows or festivals using <span class="franc-text">franc&rsquo;s</span> map.</p>
         </div>
         <img src="_assets/images/use-the-map@2x.png" id="map-sh" class="image--screenshot"/>
+        <img id="marker-1" class="image--marker" src="_assets/images/larger-marker@2x.png" />
+        <img id="marker-2" class="image--marker" src="_assets/images/large-marker@2x.png" />
+        <img id="marker-3" class="image--marker" src="_assets/images/marker@2x.png" />
+        <img id="marker-4" class="image--marker" src="_assets/images/small-marker@2x.png" />
+        <img id="marker-5" class="image--marker" src="_assets/images/smaller-marker@2x.png" />
       </div>
-      <div id="marker-1" class="image"></div>
-      <div id="marker-2" class="image"></div>
-      <div id="marker-3" class="image"></div>
-      <div id="marker-4" class="image"></div>
-      <div id="marker-5" class="image"></div>
+      
     </div>
 
     <div class="m-wrapper">
@@ -100,22 +100,23 @@ helps you easily find and meet up with friends." />
           <h3><span class="franc-text">franc</span> update&#8230;</h3>
           <p>We are working hard to get the first testable version in your hands. If you would like to be one of select few testing <span class="franc-text">franc</span> then fill out the below.</p>
           <form class="m-form-sign-up--footer">
-            <button class="m-button m-button--white">Sign up</button>
+            <button class="m-button--primary">Sign up</button>
             <span>
               <label class="is-hidden" for="email">Email</label>
               <input id="email" type="email" name="email" placeholder="Enter your email&#8230;">
-  <!-- the error should only happen if: the person enters an invalid email. If Jill has already sent us her email, DO NOT duplicate it but handle the form as if she sent an approved email and show the success section. Once the user focuses the input to try again remove the error by reapplying the is-hidden class to the m-error div. -->
               <div class="is-hidden m-error">
                 <p>Oops! This isn't a valid email.</p>
               </div>
             </span>
           </form>
         </div>
-
+      </div>
+      <div class="m-divider"></div>
+      <div class="full-width--footer">
         <div class="contact">
-          <a href="#" class="email" target="_blank" title="email us">Email</a>
-          <a href="#" class="twitter" target="_blank" title="keep up on the latest happenings">Twitter</a>
-          <a href="#" class="dribbble" target="_blank" title="view franc's latest design work">Dribbble</a>
+          <a href="#" class="contact-link--email" target="_blank" title="email us">Email</a>
+          <a href="#" class="contact-link--twitter" target="_blank" title="keep up on the latest happenings">Twitter</a>
+          <a href="#" class="contact-link--dribbble" target="_blank" title="view franc's latest design work">Dribbble</a>
         </div>
 
         <div class="social">
@@ -123,15 +124,16 @@ helps you easily find and meet up with friends." />
           <!-- tweet site -->
         </div>
 
-        <ul class="m-subnav">
-          <li><a href="for-festivals/" title="for festival owners and promoters">For festivals</a></li>
-          <li><a href="mailto:jack@findfranc.com" title="email us for help">Support</a></li>
-          <li><a href="mailto:james@findfranc.com" title="email us to chat">Contact</a></li>
-        </ul>
+        <div class="m-subnav">
+          <a href="for-festivals/" title="for festival owners and promoters">For festivals</a>
+          <a href="mailto:jack@findfranc.com" title="email us for help">Support</a>
+          <a href="mailto:james@findfranc.com" title="email us to chat">Contact</a>
+        </div>
 
         <small>&copy;2013 notch llc, all rights reserved. franc is a notch creation.</small>
       </div>
     </footer>
+    <script src="_assets/scripts/main.js"></script>
     <script src="_assets/scripts/skrollr.min.js"></script>
   </body>
 </html>
