@@ -8,9 +8,13 @@
 
 .image--screenshot {
   @extend .image;
-  width: ($column * 2.75);
+  width: ($column * 2);
   height: auto;
-  background-size: 377px 620px;
+  margin: 0 auto;
+  @media screen and (min-width: $bp) {
+    width: ($column * 2.75);
+    margin: 0;
+  }
 }
 
 .image--marker {
@@ -28,20 +32,14 @@
   }
 }
 
-#add-sh {
-  // background-image: url('../images/add-friends@2x.png');
-}
-
+// screenshot images
 #map-sh {
-  float: right;
-  // background-image: url('../images/use-the-map@2x.png');
-  // background-position: right;
+  @media screen and (min-width: $bp) {
+    float: right;
+  }
 }
 
-#stay-put-sh {
-  //background-image: url('../images/ask-for-a-stay-put@2x.png');
-}
-
+// backgrounds that be parallaxin'
 #white-franc {
   @include position(absolute, 0 0px 0px 0);
   height: 311px;
