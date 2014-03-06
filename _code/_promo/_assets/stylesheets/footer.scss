@@ -1,12 +1,14 @@
 footer {
   position: relative;
-  margin-bottom: $baseline * 2;
+  margin: 0 auto $baseline * 2;
   background: white;
+  @media screen and (min-width: $bp) {
+    margin: 0 0 $baseline * 2;
+  }
 }
 
 .m-update {
-  width: ($column * 6) + ($gutter * 5);
-  //margin-bottom: $baseline * 17;
+  width: 100%;
   > h3 {
     @include font-size(3.2);
     margin: 0 0 ($baseline * 10);
@@ -18,10 +20,16 @@ footer {
     color: $darker-gray;
     margin-bottom: ($baseline * 8);
   }
+  @media screen and (min-width: $bp) {
+    width: ($column * 6) + ($gutter * 5);
+  }
 }
 
 .contact {
-  // margin-bottom: $baseline * 6;
+  text-align: center;
+  @media screen and (min-width: $bp-small) {
+    text-align: left;
+  }
 }
 
 .contact-link {
