@@ -458,12 +458,17 @@ a[role=top-nav] {
 
 footer {
   position: relative;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   background: white;
+}
+@media screen and (min-width: 900px) {
+  footer {
+    margin: 0 0 12px;
+  }
 }
 
 .m-update {
-  width: 700px;
+  width: 100%;
 }
 .m-update > h3 {
   font-size: 32px;
@@ -477,6 +482,20 @@ footer {
   line-height: 1.25;
   color: #959eac;
   margin-bottom: 48px;
+}
+@media screen and (min-width: 900px) {
+  .m-update {
+    width: 700px;
+  }
+}
+
+.contact {
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .contact {
+    text-align: left;
+  }
 }
 
 .contact-link, .contact-link--email, .contact-link--twitter, .contact-link--dribbble {
@@ -616,6 +635,9 @@ small {
   *zoom: 1;
   position: relative;
   width: 100%;
+  padding: 10px;
+  background: rgba(97, 105, 117, 0.65);
+  border-radius: 6px;
 }
 .m-form-sign-up:before, .m-form-sign-up--footer:before, .m-form-sign-up:after, .m-form-sign-up--footer:after {
   content: " ";
@@ -627,33 +649,19 @@ small {
 @media screen and (min-width: 600px) {
   .m-form-sign-up, .m-form-sign-up--footer {
     width: 460px;
+    padding: 0;
+    background: transparent;
+    border-radius: none;
   }
 }
 .m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue, .m-form-sign-up > .m-button--primary, .m-form-sign-up--footer > .m-button--primary {
-  position: absolute;
-  top: 109px;
-  left: 50%;
-  margin-left: -42.5px;
-}
-@media screen and (min-width: 600px) {
-  .m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue, .m-form-sign-up > .m-button--primary, .m-form-sign-up--footer > .m-button--primary {
-    position: relative;
-    float: right;
-  }
+  float: right;
 }
 
 .m-form-sign-up > span, .m-form-sign-up--footer > span {
-  position: absolute;
-  top: 50px;
   display: block;
-  width: 100%;
+  padding-right: 20px;
   overflow: hidden;
-}
-@media screen and (min-width: 600px) {
-  .m-form-sign-up > span, .m-form-sign-up--footer > span {
-    position: relative;
-    padding-right: 20px;
-  }
 }
 .m-form-sign-up > span > input, .m-form-sign-up--footer > span > input {
   font-size: 20px;
@@ -707,7 +715,13 @@ small {
 }
 
 .m-form-sign-up--footer {
-  width: 480px;
+  padding: 0;
+  background: none;
+}
+@media screen and (min-width: 600px) {
+  .m-form-sign-up--footer {
+    width: 480px;
+  }
 }
 
 .m-form-sign-up--footer > span > input {
@@ -757,9 +771,15 @@ small {
 }
 
 .image--screenshot {
-  width: 275px;
+  width: 200px;
   height: auto;
-  background-size: 377px 620px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .image--screenshot {
+    width: 275px;
+    margin: 0;
+  }
 }
 
 .image--marker {
@@ -778,8 +798,10 @@ small {
   }
 }
 
-#map-sh {
-  float: right;
+@media screen and (min-width: 900px) {
+  #map-sh {
+    float: right;
+  }
 }
 
 #white-franc {
@@ -904,43 +926,72 @@ small {
 }
 
 .full-width--update {
-  padding: 114px 0 70px;
+  padding: 114px 20px 70px;
+}
+@media screen and (min-width: 900px) {
+  .full-width--update {
+    padding: 114px 0 70px;
+  }
 }
 
 .full-width--contact {
-  padding: 0 0 19px;
+  padding: 0 20px 19px;
+}
+@media screen and (min-width: 900px) {
+  .full-width--contact {
+    padding: 0 0 19px;
+  }
 }
 
 .full-width--footer {
-  padding: 0 0 114px 0;
+  padding: 0 20px 114px;
+}
+@media screen and (min-width: 900px) {
+  .full-width--footer {
+    padding: 0 0 114px;
+  }
 }
 
 .m-mod, .m-mod--story, .m-mod--right, .m-mod--left {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  width: 460px;
+  width: 100%;
+  margin: 0 auto;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75), -1px -1px 1px rgba(255, 255, 255, 0.75);
 }
 .m-mod > h2, .m-mod--story > h2, .m-mod--right > h2, .m-mod--left > h2 {
   font-size: 32px;
   font-size: 3.2rem;
-  margin: 130px 0 6px;
   line-height: 1.3125;
+  margin: 0 auto 6px;
+}
+@media screen and (min-width: 900px) {
+  .m-mod > h2, .m-mod--story > h2, .m-mod--right > h2, .m-mod--left > h2 {
+    margin: 130px 0 6px;
+  }
 }
 .m-mod > p, .m-mod--story > p, .m-mod--right > p, .m-mod--left > p {
   font-size: 20px;
   font-size: 2rem;
   line-height: 1.25;
   color: #959eac;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 900px) {
+  .m-mod > p, .m-mod--story > p, .m-mod--right > p, .m-mod--left > p {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  .m-mod, .m-mod--story, .m-mod--right, .m-mod--left {
+    width: 460px;
+  }
 }
 
 .m-mod--story {
-  width: 100%;
-  margin: 0 auto;
   margin-bottom: -110px;
-  padding-top: 67px;
-  padding-bottom: 0;
+  padding: 67px 20px 0;
   background: white;
 }
 .m-mod--story > p {
@@ -956,15 +1007,20 @@ small {
 @media screen and (min-width: 900px) {
   .m-mod--story {
     width: 700px;
+    padding: 67px 0 0;
   }
 }
 
-.m-mod--right {
-  float: right;
+@media screen and (min-width: 900px) {
+  .m-mod--right {
+    float: right;
+  }
 }
 
-.m-mod--left {
-  float: left;
+@media screen and (min-width: 900px) {
+  .m-mod--left {
+    float: left;
+  }
 }
 
 .is-hidden {

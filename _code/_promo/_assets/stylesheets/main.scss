@@ -52,42 +52,59 @@
 
 .full-width--update {
   @extend .full-width;
-  padding: ($baseline * 19) 0 ($baseline * 19 - 44);
+  padding: ($baseline * 19) $gutter ($baseline * 19 - 44);
+  @media screen and (min-width: $bp) {
+    padding: ($baseline * 19) 0 ($baseline * 19 - 44);
+  }
 }
 
 .full-width--contact {
   @extend .full-width;
-  padding: 0 0 ($baseline * 3 + 1);
+  padding: 0 $gutter ($baseline * 3 + 1);
+  @media screen and (min-width: $bp) {
+    padding: 0 0 ($baseline * 3 + 1);
+  }
 }
 
 .full-width--footer {
   @extend .full-width;
-  padding: 0 0 ($baseline * 19) 0;
+  padding: 0 $gutter ($baseline * 19);
+  @media screen and (min-width: $bp) {
+    padding: 0 0 ($baseline * 19);
+  }
 }
 
 .m-mod {
   @include transition (all $animation-duration ease-in-out);
-  width: ($column * 4) + ($gutter * 3);
+  width: 100%;
+  margin: 0 auto;
   text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
   > h2 {
     @include font-size(3.2);
-    margin: ($baseline * 21 + 4) 0 $baseline;
     line-height: 1.3125;
+    margin: 0 auto $baseline;
+    @media screen and (min-width: $bp) { 
+      margin: ($baseline * 21 + 4) 0 $baseline;
+    }
   }
   > p {
     @include font-size(2);
     line-height: 1.25; // 25px
     color: $darker-gray;
+    margin-bottom: $baseline * 8;
+    @media screen and (min-width: $bp) {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: $bp-small) { 
+    width: ($column * 4) + ($gutter * 3);
   }
 }
 
 .m-mod--story {
   @extend .m-mod;
-  width: 100%;
-  margin: 0 auto;
   margin-bottom: -110px;
-  padding-top: $baseline * 12 - 5;
-  padding-bottom: 0;
+  padding: $baseline * 12 - 5 $gutter 0;
   background: white;
   > p { 
     @include font-size(3.2);
@@ -98,17 +115,22 @@
   }
   @media screen and (min-width: $bp) { 
     width: ($column * 6) + ($gutter * 5);
+    padding: $baseline * 12 - 5 0 0;
   }
 }
 
 .m-mod--right { 
   @extend .m-mod;
-  float: right;
+  @media screen and (min-width: $bp) { 
+    float: right;
+  }
 }
 
 .m-mod--left { 
   @extend .m-mod;
-  float: left;
+  @media screen and (min-width: $bp) { 
+    float: left;
+  }
 }
 
 .is-hidden {
