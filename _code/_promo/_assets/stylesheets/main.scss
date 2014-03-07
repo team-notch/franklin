@@ -32,7 +32,7 @@
   padding: ($baseline * 19) $gutter;
 
   @media screen and (min-width: $bp) {
-    width: ($column * 6) + ($gutter * 5);
+    width: ($column * 7) + ($gutter * 6);
     margin: 0 auto;
   }
 
@@ -46,7 +46,11 @@
   padding-top: 0;
   padding-bottom: 0;
   @media screen and (min-width: $bp) {
+    width: ($column * 6) + ($gutter * 5);
     padding: 0;
+  }
+  @media screen and (min-width: $bp-large) {
+    width: ($column * 8) + ($gutter * 7);
   }
 }
 
@@ -54,7 +58,11 @@
   @extend .full-width;
   padding: ($baseline * 19) $gutter ($baseline * 19 - 44);
   @media screen and (min-width: $bp) {
+    width: ($column * 6) + ($gutter * 5);
     padding: ($baseline * 19) 0 ($baseline * 19 - 44);
+  }
+  @media screen and (min-width: $bp-large) {
+    width: ($column * 8) + ($gutter * 7);
   }
 }
 
@@ -62,7 +70,11 @@
   @extend .full-width;
   padding: 0 $gutter ($baseline * 3 + 1);
   @media screen and (min-width: $bp) {
+    width: ($column * 6) + ($gutter * 5);
     padding: 0 0 ($baseline * 3 + 1);
+  }
+  @media screen and (min-width: $bp-large) {
+    width: ($column * 8) + ($gutter * 7);
   }
 }
 
@@ -70,7 +82,11 @@
   @extend .full-width;
   padding: 0 $gutter ($baseline * 19);
   @media screen and (min-width: $bp) {
+    width: ($column * 6) + ($gutter * 5);
     padding: 0 0 ($baseline * 19);
+  }
+  @media screen and (min-width: $bp-large) {
+    width: ($column * 8) + ($gutter * 7);
   }
 }
 
@@ -78,6 +94,7 @@
   @include transition (all $animation-duration ease-in-out);
   width: 100%;
   margin: 0 auto;
+  text-align: center;
   text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
   > h2 {
     @include font-size(3.2);
@@ -99,6 +116,10 @@
   @media screen and (min-width: $bp-small) { 
     width: ($column * 4) + ($gutter * 3);
   }
+
+  @media screen and (min-width: $bp) {
+    text-align: left;
+  }
 }
 
 .m-mod--story {
@@ -106,12 +127,16 @@
   margin-bottom: -110px;
   padding: $baseline * 12 - 5 $gutter 0;
   background: white;
+  text-align: left;
   > p { 
     @include font-size(3.2);
     margin-bottom: $baseline * 3;
     font-weight: $font-light;
     line-height: 1.3125;
     &:last-child { margin-bottom: 0;}
+  }
+  @media screen and (min-width: $bp-small) { 
+    width: 90%;
   }
   @media screen and (min-width: $bp) { 
     width: ($column * 6) + ($gutter * 5);
