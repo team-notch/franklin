@@ -20,6 +20,11 @@ footer {
     color: $darker-gray;
     margin-bottom: ($baseline * 8);
   }
+
+  @media screen and (min-width: $bp-small) {
+    width: 90%;
+  }
+
   @media screen and (min-width: $bp) {
     width: ($column * 6) + ($gutter * 5);
   }
@@ -87,17 +92,29 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
   > a {
-    display: inline-block;
-    margin-right: $baseline * 5;
+    display: block;
+    margin: 0 0 ($baseline * 2);
+    text-align: center;
     color: $dark-gray;
-    &:last-child { margin-right: 0;}
+    &:last-child { margin-bottom: 0;}
+    @media screen and (min-width: $bp-small) {
+      display: inline-block;
+      margin: 0 ($baseline * 5) 0 0;
+      text-align: left;
+      &:last-child { margin-right: 0;}
+    }
   }
 }
 
 small {
   @include font-size(1.4);
+  display: block;
   line-height: 0.77777778; // 18px
+  text-align: center;
   color: $light-gray;
+  @media screen and (min-width: $bp-small) {
+    text-align: left;
+  }
 }
 
 .m-divider {
