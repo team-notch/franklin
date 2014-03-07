@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>franc... never be lost at a show</title>
-    <meta name="description" content="Don’t be lost at the show (or festival), franc
+    <meta name="description"   content="Don’t be lost at the show (or festival), franc
 helps you easily find and meet up with friends." />
-    <meta name="keyword" content="franc, franc finder, find franc, festival friend finder, friend finder app, friend locator app, find my friends, show finder, festival app" />
-    <meta name="author" content="notch LLC" />
+    <meta name="keyword"       content="franc, franc finder, find franc, festival friend finder, friend finder app, friend locator app, find my friends, show finder, festival app, find friends at a show, flamingo franc" />
+    <meta name="author"        content="notch LLC" />
+    <meta property="fb:app_id" content="1234567890" /> 
+    <meta property="og:type"   content="mobile app" /> 
+    <meta property="og:url"    content="http://findfranc.com" /> 
+    <meta property="og:title"  content="franc a festivalgoers friend" /> 
+    <meta property="og:image"  content="https://findfranc.com/_assets/images/franc-app-preview-si@2x.png" /> 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
@@ -123,8 +128,8 @@ helps you easily find and meet up with friends." />
         </div>
       
         <div class="social">
-          <!-- facebook like site -->
-          <!-- tweet site -->
+          <div class="fb-share-button" data-href="http://findfranc.com" data-type="button"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://findfranc.com" data-text="franc helps you easily find and meet up with friends at shows or festivals." data-count="none" data-hashtags="findfranc">Tweet</a>
         </div>
       </div>
 
@@ -140,6 +145,15 @@ helps you easily find and meet up with friends." />
         <small>&copy;2013 notch llc, all rights reserved. franc is a notch creation.</small>
       </div>
     </footer>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=189927507716660";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <script src="_assets/scripts/skrollr.min.js"></script>
     <script src="_assets/scripts/main.js"></script>
   </body>
