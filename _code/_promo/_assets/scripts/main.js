@@ -2,6 +2,6 @@ var s = skrollr.init();
 
 $(document).ready(function() {
   $('a').smoothScroll({
-    speed:  1000
+    speed:  1500
   });
 });
