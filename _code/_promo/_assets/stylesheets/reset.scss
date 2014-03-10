@@ -298,7 +298,7 @@ body {
 body {
   @include font-smoothing(on);
   @include hidpi(1.5) { @include font-smoothing(off); }
-  @include font-size();
+  @include font-size(1);
   position: relative;
   background: $lightest-gray;
   color: $darkest-gray;
@@ -306,6 +306,12 @@ body {
   font-weight: $font-normal;
   line-height: 1;
   text-rendering: optimizeLegibility;
+  @media screen and (min-width: $bp-larger) { 
+    @include font-size(1.1);
+  }
+  @media screen and (min-width: $column * 19) {
+    @include font-size(1.2);
+  }
 }
 
 h1,
@@ -334,7 +340,6 @@ p {
 
 a,
 a:hover,
-a:visited,
 a:active {
   color: $pink;
   cursor: pointer;
