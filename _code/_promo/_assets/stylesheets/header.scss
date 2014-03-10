@@ -13,6 +13,7 @@ header {
 
 a[role=top-nav] {
   @include position(absolute, 0px $gutter 0 0);
+  @include font-size(1.6);
   @media screen and (min-width: $bp) {
     @include position(absolute, 0px 0px 0 0);
   }
@@ -21,9 +22,6 @@ a[role=top-nav] {
 .bottom-button {
   @include position(absolute, 0 0 ($baseline * 6) 0px);
   width: 100%;
-}
-
-a[role=start-parallax] {
 }
 
 .m-logo {
@@ -63,5 +61,23 @@ a[role=start-parallax] {
   }
   @media screen and (min-width: $bp) {
     width: ($column * 5) + ($gutter * 6);
+  }
+  @media screen and (min-width: $bp-larger) {
+    width: ($column * 7) + ($gutter * 9);
+  }
+}
+
+.for-festivals {
+  > header { background-image: url('/_assets/images/festival-home-bg.jpg');}
+
+  .m-pitch {
+    @media screen and (min-width: $bp) {
+      width: ($column * 6) + ($gutter * 5);
+    }
+    @media screen and (min-width: $bp-larger) {
+    width: ($column * 9);
+  }
+    > h1 { text-shadow: -2px -2px 4px transparentize(black, 0.5), 2px 2px 2px transparentize(black, 0.5), 0px 0px 32px black;}
+    > p { text-shadow: -1px -1px 2px transparentize(black, 0.5), 0px 1px 1px transparentize(black, 0.5), 0px 0px 12px black;}
   }
 }
