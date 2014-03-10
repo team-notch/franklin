@@ -247,8 +247,8 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 10px;
+  font-size: 1em;
   position: relative;
   background: #f5f9ff;
   color: #616975;
@@ -263,6 +263,18 @@ body {
     -moz-osx-font-smoothing: auto;
   }
 }
+@media screen and (min-width: 1600px) {
+  body {
+    font-size: 11px;
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body {
+    font-size: 12px;
+    font-size: 1.2em;
+  }
+}
 
 h1,
 h2,
@@ -274,17 +286,17 @@ h3 {
 
 h1 {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 3.2em;
 }
 
 h2 {
   font-size: 26px;
-  font-size: 2.6rem;
+  font-size: 2.6em;
 }
 
 h3 {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 ul,
@@ -301,7 +313,6 @@ p {
 
 a,
 a:hover,
-a:visited,
 a:active {
   color: #f665b2;
   cursor: pointer;
@@ -395,6 +406,8 @@ a[role=top-nav] {
   position: absolute;
   top: 0px;
   right: 20px;
+  font-size: 16px;
+  font-size: 1.6em;
 }
 @media screen and (min-width: 900px) {
   a[role=top-nav] {
@@ -435,7 +448,7 @@ a[role=top-nav] {
 }
 .m-pitch > h1 {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 3.2em;
   margin-bottom: 24px;
   line-height: 1.3125;
   text-shadow: 2px 2px 2px rgba(96, 211, 240, 0.4);
@@ -445,7 +458,7 @@ a[role=top-nav] {
 }
 .m-pitch p {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   margin-bottom: 19px;
   line-height: 1.25;
   text-shadow: 0px 1px 1px #60d3f0;
@@ -454,6 +467,31 @@ a[role=top-nav] {
   .m-pitch {
     width: 620px;
   }
+}
+@media screen and (min-width: 1600px) {
+  .m-pitch {
+    width: 880px;
+  }
+}
+
+.for-festivals > header {
+  background-image: url("/_assets/images/festival-home-bg.jpg");
+}
+@media screen and (min-width: 900px) {
+  .for-festivals .m-pitch {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .for-festivals .m-pitch {
+    width: 900px;
+  }
+}
+.for-festivals .m-pitch > h1 {
+  text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5), 0px 0px 32px black;
+}
+.for-festivals .m-pitch > p {
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5), 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 12px black;
 }
 
 footer {
@@ -466,19 +504,25 @@ footer {
     margin: 0 0 12px;
   }
 }
+@media screen and (min-width: 2000px) {
+  footer {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
 
 .m-update {
   width: 100%;
 }
 .m-update > h3 {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 3.2em;
   margin: 0 0 60px;
   line-height: 1.3125;
 }
 .m-update > p {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.25;
   color: #959eac;
   margin-bottom: 48px;
@@ -499,13 +543,14 @@ footer {
 }
 @media screen and (min-width: 600px) {
   .contact {
+    float: left;
     text-align: left;
   }
 }
 
 .contact-link, .contact-link--email, .contact-link--twitter, .contact-link--dribbble {
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -519,7 +564,7 @@ footer {
 }
 .contact-link:before, .contact-link--email:before, .contact-link--twitter:before, .contact-link--dribbble:before {
   font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 2.4em;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -550,9 +595,29 @@ footer {
   content: "\e7d7";
 }
 
+.social {
+  margin-top: 24px;
+  text-align: center;
+}
+.social > .fb-share-button {
+  margin-right: 21px;
+  line-height: 7px;
+  cursor: pointer;
+}
+.social > #twitter-widget-0 {
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .social {
+    float: right;
+    margin-top: -20px;
+    text-align: left;
+  }
+}
+
 .m-subnav {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   margin-bottom: 14px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -567,6 +632,10 @@ footer {
 .m-subnav > a:last-child {
   margin-bottom: 0;
 }
+.m-subnav > a:hover {
+  color: #f665b2;
+  text-decoration: underline;
+}
 @media screen and (min-width: 600px) {
   .m-subnav > a {
     display: inline-block;
@@ -580,7 +649,7 @@ footer {
 
 small {
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   display: block;
   line-height: 0.77777778;
   text-align: center;
@@ -604,7 +673,7 @@ small {
 
 .m-button, .m-button--large, .m-button--light-blue, .m-button--primary {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
@@ -613,6 +682,7 @@ small {
   border-radius: 4px;
   background: transparent;
   border: 1px solid white;
+  font-weight: normal;
   color: white;
   line-height: 32px;
 }
@@ -627,15 +697,13 @@ small {
 
 .m-button--large {
   font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 2.4em;
   padding: 0 20px;
   line-height: 40px;
   font-weight: 300;
 }
 
 .m-button--light-blue {
-  font-size: 16px;
-  font-size: 1.6rem;
   border-color: #8adff5;
   color: #8adff5;
 }
@@ -688,7 +756,7 @@ small {
 }
 .m-form-sign-up > span > input, .m-form-sign-up--footer > span > input {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
@@ -794,6 +862,8 @@ small {
 }
 
 .image--screenshot {
+  position: relative;
+  z-index: 2;
   width: 200px;
   height: auto;
   margin: 0 auto;
@@ -802,6 +872,11 @@ small {
   .image--screenshot {
     width: 275px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .image--screenshot {
+    width: 350px;
   }
 }
 
@@ -890,6 +965,16 @@ small {
   height: 37px;
 }
 
+.for-festivals #met-up-group {
+  float: right;
+  width: auto;
+  margin-top: 0;
+}
+
+.for-festivals {
+  height: auto !important;
+}
+
 .franc-text {
   color: #f665b2;
   font-weight: 400;
@@ -907,6 +992,12 @@ small {
 }
 .m-wrapper:after, .m-wrapper--white:after {
   clear: both;
+}
+@media screen and (min-width: 2000px) {
+  .m-wrapper, .m-wrapper--white {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
 }
 
 .m-wrapper--white {
@@ -937,6 +1028,17 @@ small {
     width: 940px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .full-width, .full-width--header, .full-width--update, .full-width--contact, .full-width--footer {
+    width: 1180px;
+    padding: 156px 40px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .full-width, .full-width--header, .full-width--update, .full-width--contact, .full-width--footer {
+    padding: 192px 40px;
+  }
+}
 
 .full-width--header {
   padding-top: 0;
@@ -951,6 +1053,11 @@ small {
 @media screen and (min-width: 1200px) {
   .full-width--header {
     width: 940px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .full-width--header {
+    width: 1180px;
   }
 }
 
@@ -968,6 +1075,11 @@ small {
     width: 940px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .full-width--update {
+    width: 1180px;
+  }
+}
 
 .full-width--contact {
   padding: 0 20px 19px;
@@ -981,6 +1093,11 @@ small {
 @media screen and (min-width: 1200px) {
   .full-width--contact {
     width: 940px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .full-width--contact {
+    width: 1180px;
   }
 }
 
@@ -998,6 +1115,11 @@ small {
     width: 940px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .full-width--footer {
+    width: 1180px;
+  }
+}
 
 .m-mod, .m-mod--story, .m-mod--right, .m-mod--left {
   -webkit-transition: all 300ms ease-in-out;
@@ -1010,7 +1132,7 @@ small {
 }
 .m-mod > h2, .m-mod--story > h2, .m-mod--right > h2, .m-mod--left > h2 {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 3.2em;
   line-height: 1.3125;
   margin: 0 auto 6px;
 }
@@ -1021,7 +1143,7 @@ small {
 }
 .m-mod > p, .m-mod--story > p, .m-mod--right > p, .m-mod--left > p {
   font-size: 20px;
-  font-size: 2rem;
+  font-size: 2em;
   line-height: 1.25;
   color: #959eac;
   margin-bottom: 48px;
@@ -1048,12 +1170,17 @@ small {
   background: white;
   text-align: left;
 }
+.m-mod--story > h2 {
+  margin: 0 0 18px;
+  font-weight: 400;
+}
 .m-mod--story > p {
   font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 3.2em;
   margin-bottom: 18px;
   font-weight: 300;
   line-height: 1.3125;
+  color: #616975;
 }
 .m-mod--story > p:last-child {
   margin-bottom: 0;
@@ -1069,6 +1196,12 @@ small {
     padding: 67px 0 0;
   }
 }
+@media screen and (min-width: 1600px) {
+  .m-mod--story {
+    width: 940px;
+    padding: 103px 20px 0;
+  }
+}
 
 @media screen and (min-width: 900px) {
   .m-mod--right {
@@ -1080,6 +1213,23 @@ small {
   .m-mod--left {
     float: left;
   }
+}
+
+.festival-story-bg {
+  *zoom: 1;
+  padding-top: 48px;
+  background: #f5f9ff;
+}
+.festival-story-bg:before, .festival-story-bg:after {
+  content: " ";
+  display: table;
+}
+.festival-story-bg:after {
+  clear: both;
+}
+
+.for-festivals .m-mod--story {
+  margin-bottom: -510px;
 }
 
 .is-hidden {

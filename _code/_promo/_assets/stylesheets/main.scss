@@ -8,6 +8,10 @@
 @import 'form';
 @import 'imgs';
 
+.for-festivals {
+  height: auto !important;
+}
+
 .franc-text {
   color: $pink;
   font-weight: $font-normal;
@@ -18,6 +22,10 @@
   position: relative;
   width: 100%;
   background: transparent;
+  @media screen and (min-width: $bp-largest) {
+    max-width: $bp-largest;
+    margin: 0 auto;
+  }
 }
 
 .m-wrapper--white {
@@ -30,14 +38,19 @@
   position: relative;
   width: 100%;
   padding: ($baseline * 19) $gutter;
-
   @media screen and (min-width: $bp) {
     width: ($column * 7) + ($gutter * 6);
     margin: 0 auto;
   }
-
   @media screen and (min-width: $bp-large) {
     width: ($column * 8) + ($gutter * 7);
+  }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 10) + ($gutter * 9);
+    padding: ($baseline * 26) ($gutter * 2);
+  }
+  @media screen and (min-width: $bp-largest) {
+    padding: ($baseline * 32) ($gutter * 2);
   }
 }
 
@@ -52,6 +65,9 @@
   @media screen and (min-width: $bp-large) {
     width: ($column * 8) + ($gutter * 7);
   }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 10) + ($gutter * 9);
+  }
 }
 
 .full-width--update {
@@ -63,6 +79,9 @@
   }
   @media screen and (min-width: $bp-large) {
     width: ($column * 8) + ($gutter * 7);
+  }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 10) + ($gutter * 9);
   }
 }
 
@@ -76,6 +95,9 @@
   @media screen and (min-width: $bp-large) {
     width: ($column * 8) + ($gutter * 7);
   }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 10) + ($gutter * 9);
+  }
 }
 
 .full-width--footer {
@@ -87,6 +109,9 @@
   }
   @media screen and (min-width: $bp-large) {
     width: ($column * 8) + ($gutter * 7);
+  }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 10) + ($gutter * 9);
   }
 }
 
@@ -100,62 +125,66 @@
     @include font-size(3.2);
     line-height: 1.3125;
     margin: 0 auto $baseline;
-    @media screen and (min-width: $bp) { 
-      margin: ($baseline * 21 + 4) 0 $baseline;
-    }
+    @media screen and (min-width: $bp) { margin: ($baseline * 21 + 4) 0 $baseline;}
   }
   > p {
     @include font-size(2);
     line-height: 1.25; // 25px
     color: $darker-gray;
     margin-bottom: $baseline * 8;
-    @media screen and (min-width: $bp) {
-      margin-bottom: 0;
-    }
+    @media screen and (min-width: $bp) { margin-bottom: 0;}
   }
-  @media screen and (min-width: $bp-small) { 
-    width: ($column * 4) + ($gutter * 3);
-  }
-
-  @media screen and (min-width: $bp) {
-    text-align: left;
-  }
+  @media screen and (min-width: $bp-small) { width: ($column * 4) + ($gutter * 3);}
+  @media screen and (min-width: $bp) { text-align: left;}
 }
 
 .m-mod--story {
   @extend .m-mod;
   margin-bottom: -110px;
-  padding: $baseline * 12 - 5 $gutter 0;
+  padding: ($baseline * 12 - 5) $gutter 0;
   background: white;
   text-align: left;
+  > h2 { 
+    margin: 0 0 ($baseline * 3);
+    font-weight: $font-normal;
+  }
   > p { 
     @include font-size(3.2);
     margin-bottom: $baseline * 3;
     font-weight: $font-light;
     line-height: 1.3125;
+    color: $darkest-gray;
     &:last-child { margin-bottom: 0;}
   }
-  @media screen and (min-width: $bp-small) { 
-    width: 90%;
-  }
+  @media screen and (min-width: $bp-small) { width: 90%;}
   @media screen and (min-width: $bp) { 
     width: ($column * 6) + ($gutter * 5);
     padding: $baseline * 12 - 5 0 0;
+  }
+  @media screen and (min-width: $bp-larger) { 
+    width: ($column * 8) + ($gutter * 7);
+    padding: ($baseline * 18 - 5) $gutter 0;
   }
 }
 
 .m-mod--right { 
   @extend .m-mod;
-  @media screen and (min-width: $bp) { 
-    float: right;
-  }
+  @media screen and (min-width: $bp) { float: right;}
 }
 
 .m-mod--left { 
   @extend .m-mod;
-  @media screen and (min-width: $bp) { 
-    float: left;
-  }
+  @media screen and (min-width: $bp) { float: left;}
+}
+
+.festival-story-bg {
+  @include clearfix;
+  padding-top: $baseline * 8;
+  background: $lightest-gray;
+}
+
+.for-festivals {
+  .m-mod--story { margin-bottom: -510px;}
 }
 
 .is-hidden {
