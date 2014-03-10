@@ -5,6 +5,10 @@ footer {
   @media screen and (min-width: $bp) {
     margin: 0 0 $baseline * 2;
   }
+  @media screen and (min-width: $bp-largest) {
+    max-width: $bp-largest;
+    margin: 0 auto;
+  }
 }
 
 .m-update {
@@ -33,6 +37,7 @@ footer {
 .contact {
   text-align: center;
   @media screen and (min-width: $bp-small) {
+    float: left;
     text-align: left;
   }
 }
@@ -85,6 +90,22 @@ footer {
   }
 }
 
+.social {
+  margin-top: ($baseline * 4);
+  text-align: center;
+  > .fb-share-button {
+    margin-right: $baseline * 4 - 3;
+    line-height: 7px; // aligns the two buttons
+    cursor: pointer;
+  }
+  > #twitter-widget-0 { cursor: pointer;}
+  @media screen and (min-width: $bp-small) { 
+    float: right;
+    margin-top: -($baseline * 4 - 4);
+    text-align: left;
+  }
+}
+
 .m-subnav {
   @include font-size(2);
   margin-bottom: $baseline * 3 - 4;
@@ -97,6 +118,10 @@ footer {
     text-align: center;
     color: $dark-gray;
     &:last-child { margin-bottom: 0;}
+    &:hover {
+      color: $pink;
+      text-decoration: underline;
+    }
     @media screen and (min-width: $bp-small) {
       display: inline-block;
       margin: 0 ($baseline * 5) 0 0;
