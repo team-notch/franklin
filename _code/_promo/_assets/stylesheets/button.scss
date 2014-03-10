@@ -6,6 +6,7 @@
   border-radius: $base-width - 1;
   background: transparent;
   border: 1px solid white;
+  font-weight: normal;
   color: white;
   line-height: $baseline * 6 - 4;
 
@@ -29,7 +30,6 @@
 
 .m-button--light-blue {
   @extend .m-button;
-  @include font-size(1.6);
   border-color: $lighter-blue;
   color: $lighter-blue;
 }
