@@ -69,7 +69,7 @@ $font-root-size: 10px; // Makes relative sizing math easier.
 
 @mixin font-size($value: 1.6) {
   font-size: ($value * 10) + px;
-  font-size: $value + rem;
+  font-size: $value + em;
 }
 
 @mixin text-truncate {
