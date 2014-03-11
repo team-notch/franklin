@@ -2,6 +2,7 @@
 @import 'neat';
 @import 'base';
 @import 'constants';
+@import 'mod';
 @import 'header';
 @import 'footer';
 @import 'button';
@@ -115,68 +116,6 @@
   }
 }
 
-.m-mod {
-  @include transition (all $animation-duration ease-in-out);
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
-  > h2 {
-    @include font-size(3.2);
-    line-height: 1.3125;
-    margin: 0 auto $baseline;
-    @media screen and (min-width: $bp) { margin: ($baseline * 21 + 4) 0 $baseline;}
-  }
-  > p {
-    @include font-size(2);
-    line-height: 1.25; // 25px
-    color: $darker-gray;
-    margin-bottom: $baseline * 8;
-    @media screen and (min-width: $bp) { margin-bottom: 0;}
-  }
-  @media screen and (min-width: $bp-small) { width: ($column * 4) + ($gutter * 3);}
-  @media screen and (min-width: $bp) { text-align: left;}
-}
-
-.m-mod--story {
-  @extend .m-mod;
-  margin-bottom: -110px;
-  padding: ($baseline * 12 - 5) $gutter 0;
-  background: white;
-  text-align: left;
-  > h2 { 
-    margin: 0 0 ($baseline * 3);
-    font-weight: $font-normal;
-  }
-  > p { 
-    @include font-size(3.2);
-    margin-bottom: $baseline * 3;
-    font-weight: $font-light;
-    line-height: 1.3125;
-    color: $darkest-gray;
-    &:last-child { margin-bottom: 0;}
-  }
-  @media screen and (min-width: $bp-small) { width: 90%;}
-  @media screen and (min-width: $bp) { 
-    width: ($column * 6) + ($gutter * 5);
-    padding: $baseline * 12 - 5 0 0;
-  }
-  @media screen and (min-width: $bp-larger) { 
-    width: ($column * 8) + ($gutter * 7);
-    padding: ($baseline * 18 - 5) $gutter 0;
-  }
-}
-
-.m-mod--right { 
-  @extend .m-mod;
-  @media screen and (min-width: $bp) { float: right;}
-}
-
-.m-mod--left { 
-  @extend .m-mod;
-  @media screen and (min-width: $bp) { float: left;}
-}
-
 .festival-story-bg {
   @include clearfix;
   padding-top: $baseline * 8;
@@ -190,4 +129,36 @@
 .is-hidden {
   opacity: 0;
   display: none;
+}
+
+.ie-overlay {
+  @include position(absolute, 0px 0px 0 0);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: transparentize(darken($darkest-gray, 25%), 0.1);
+  text-align: center;
+}
+
+.ie-message {
+  z-index: 200;
+  @include position(fixed, ($baseline * 4) 0 0 ($baseline * 4));
+  padding: $baseline * 4;
+  background: $error;
+  border-radius: $baseline * 2;
+  border: 2px solid darken($error, 10%);
+  box-shadow: inset 0 0 0 2px lighten($error, 3%), 0 $baseline ($baseline * 1.5) transparentize(black, 0.7);
+  > p {
+    @include font-size(2);
+    color: lighten($error, 22%);
+    > a, a:visited {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
