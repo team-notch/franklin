@@ -23,6 +23,7 @@
   position: relative;
   width: 100%;
   background: transparent;
+  overflow-y: hidden;
   @media screen and (min-width: $bp-largest) {
     max-width: $bp-largest;
     margin: 0 auto;
