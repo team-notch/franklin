@@ -20,7 +20,7 @@
   padding-right: $gutter;
   overflow: hidden;
 
-  > input {
+  div > input {
     @include font-size(2);
     @include placeholder { color: white;} 
     @include transition (all $animation-duration);
@@ -56,7 +56,7 @@
 }
 
 .m-form-sign-up--footer > span {
-  > input {
+  div > input {
     @include placeholder { color: $gray;} 
     padding: 0 ($base-width * 3) 0;
     background: white;
