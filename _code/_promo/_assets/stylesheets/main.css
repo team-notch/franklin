@@ -568,7 +568,7 @@ a[role=top-nav] {
   }
 }
 
-.for-festivals > header {
+.for-festivals > #skrollr-body > header {
   background-image: url("/_assets/images/festival-home-bg.jpg");
 }
 @media screen and (min-width: 900px) {

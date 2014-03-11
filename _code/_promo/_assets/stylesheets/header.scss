@@ -68,7 +68,7 @@ a[role=top-nav] {
 }
 
 .for-festivals {
-  > div > header { background-image: url('/_assets/images/festival-home-bg.jpg');}
+  > #skrollr-body > header { background-image: url('/_assets/images/festival-home-bg.jpg');}
 
   .m-pitch {
     @media screen and (min-width: $bp) {
