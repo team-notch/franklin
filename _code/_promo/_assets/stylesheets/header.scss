@@ -2,7 +2,7 @@ header {
   position: relative;
   height: $column * 8;
   padding: $baseline * 5 0;
-  background: white url('/_assets/images/individual-home-bg.jpg') no-repeat center 0 fixed;
+  background: white url('/_assets/images/individual-home-bg.jpg') no-repeat center 0 scroll;
   border-bottom: 2px solid $darkest-gray;
   overflow: hidden;
   text-align: center; // centers the learn more button
