@@ -28,10 +28,10 @@
   font-weight: $font-light;
 }
 
-.m-button--light-blue {
+.m-button--dark-blue {
   @extend .m-button;
-  border-color: $lighter-blue;
-  color: $lighter-blue;
+  border-color: darken($blue,16%);
+  color: darken($blue,16%);
 }
 
 .m-button--primary {
