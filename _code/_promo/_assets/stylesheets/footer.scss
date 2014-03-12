@@ -48,7 +48,7 @@ footer {
   position: relative;
   margin-right: $baseline * 5;
   padding-top: $baseline * 5 + 1;
-  color: $gray;
+  color: $dark-gray;
   text-shadow: 1px 1px 0px transparentize(white, 0.25), -1px -1px 1px transparentize(white, 0.25);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -94,11 +94,17 @@ footer {
   margin-top: ($baseline * 4);
   text-align: center;
   > .fb-share-button {
+    display: inline-block;
     margin-right: $baseline * 4 - 3;
     line-height: 7px; // aligns the two buttons
     cursor: pointer;
+    @media screen and (min-width: $bp-small) { 
+      float: left;
+    }
   }
-  > #twitter-widget-0 { cursor: pointer;}
+  > #twitter-widget-0 { 
+    cursor: pointer;
+  }
   @media screen and (min-width: $bp-small) { 
     float: right;
     margin-top: -($baseline * 4 - 4);
@@ -134,9 +140,9 @@ footer {
 small {
   @include font-size(1.4);
   display: block;
-  line-height: 0.77777778; // 18px
+  line-height: 1.2;
   text-align: center;
-  color: $light-gray;
+  color: $gray;
   @media screen and (min-width: $bp-small) {
     text-align: left;
   }
