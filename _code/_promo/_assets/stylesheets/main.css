@@ -483,7 +483,7 @@ textarea {
 
 header {
   position: relative;
-  height: 800px;
+  height: 760px;
   padding: 30px 0;
   background: white url("/_assets/images/individual-home-bg.jpg") no-repeat center 0 scroll;
   border-bottom: 2px solid #616975;
@@ -498,10 +498,17 @@ header {
 
 a[role=top-nav] {
   position: absolute;
-  top: 0px;
-  right: 20px;
+  top: -20px;
+  right: 10px;
   font-size: 16px;
   font-size: 1.6em;
+}
+@media screen and (min-width: 450px) {
+  a[role=top-nav] {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
 }
 @media screen and (min-width: 900px) {
   a[role=top-nav] {
@@ -520,14 +527,21 @@ a[role=top-nav] {
 
 .m-logo {
   display: block;
-  width: 186px;
-  height: 87px;
+  width: 167px;
+  height: 79px;
   margin: 0 0 20px;
   background: transparent url("/_assets/images/logo@2x.png") no-repeat 0 0;
-  background-size: 186px 87px;
+  background-size: 167px 79px;
 }
 .m-logo h1 {
   text-indent: -9999px;
+}
+@media screen and (min-width: 450px) {
+  .m-logo {
+    width: 186px;
+    height: 87px;
+    background-size: 186px 87px;
+  }
 }
 @media screen and (min-width: 900px) {
   .m-logo {
@@ -539,23 +553,41 @@ a[role=top-nav] {
   width: 100%;
   color: white;
   text-align: left;
+  padding: 10px;
+  background: rgba(97, 105, 117, 0.82);
+  border-radius: 6px;
+}
+@media screen and (min-width: 450px) {
+  .m-pitch {
+    padding: 0;
+    background: transparent;
+    border-radius: none;
+  }
 }
 .m-pitch > h1 {
   font-size: 32px;
   font-size: 3.2em;
   margin-bottom: 24px;
   line-height: 1.3125;
-  text-shadow: 2px 2px 2px rgba(96, 211, 240, 0.4);
 }
-.m-pitch > h1 > .franc-text {
-  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+@media screen and (min-width: 450px) {
+  .m-pitch > h1 {
+    text-shadow: -2px -2px 4px rgba(96, 211, 240, 0.5), 2px 2px 2px rgba(96, 211, 240, 0.5), 0px 0px 32px #60d3f0;
+  }
+  .m-pitch > h1 > .franc-text {
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+  }
 }
 .m-pitch p {
   font-size: 20px;
   font-size: 2em;
   margin-bottom: 19px;
   line-height: 1.25;
-  text-shadow: 0px 1px 1px #60d3f0;
+}
+@media screen and (min-width: 450px) {
+  .m-pitch p {
+    text-shadow: -1px -1px 2px rgba(96, 211, 240, 0.5), 0px 1px 1px rgba(96, 211, 240, 0.5), 0px 0px 12px #60d3f0;
+  }
 }
 @media screen and (min-width: 900px) {
   .m-pitch {
@@ -581,11 +613,15 @@ a[role=top-nav] {
     width: 900px;
   }
 }
-.for-festivals .m-pitch > h1 {
-  text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5), 0px 0px 32px black;
+@media screen and (min-width: 450px) {
+  .for-festivals .m-pitch > h1 {
+    text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5), 2px 2px 2px rgba(0, 0, 0, 0.5), 0px 0px 32px black;
+  }
 }
-.for-festivals .m-pitch > p {
-  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5), 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 12px black;
+@media screen and (min-width: 450px) {
+  .for-festivals .m-pitch > p {
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5), 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 0px 12px black;
+  }
 }
 
 footer {
@@ -651,7 +687,7 @@ footer {
   position: relative;
   margin-right: 30px;
   padding-top: 31px;
-  color: #d5d9dd;
+  color: #b8c0cc;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75), -1px -1px 1px rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -694,9 +730,15 @@ footer {
   text-align: center;
 }
 .social > .fb-share-button {
+  display: inline-block;
   margin-right: 21px;
   line-height: 7px;
   cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .social > .fb-share-button {
+    float: left;
+  }
 }
 .social > #twitter-widget-0 {
   cursor: pointer;
@@ -745,9 +787,9 @@ small {
   font-size: 14px;
   font-size: 1.4em;
   display: block;
-  line-height: 0.77777778;
+  line-height: 1.2;
   text-align: center;
-  color: #e1e6ea;
+  color: #d5d9dd;
 }
 @media screen and (min-width: 600px) {
   small {
@@ -765,7 +807,7 @@ small {
   margin-bottom: 21px;
 }
 
-.m-button, .m-button--large, .m-button--light-blue, .m-button--primary {
+.m-button, .m-button--large, .m-button--dark-blue, .m-button--primary {
   font-size: 20px;
   font-size: 2em;
   -webkit-transition: all 300ms;
@@ -780,7 +822,7 @@ small {
   color: white;
   line-height: 32px;
 }
-.m-button:hover, .m-button--large:hover, .m-button--light-blue:hover, .m-button--primary:hover {
+.m-button:hover, .m-button--large:hover, .m-button--dark-blue:hover, .m-button--primary:hover {
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   transition: all 300ms;
@@ -797,9 +839,9 @@ small {
   font-weight: 300;
 }
 
-.m-button--light-blue {
-  border-color: #8adff5;
-  color: #8adff5;
+.m-button--dark-blue {
+  border-color: #16bfe9;
+  color: #16bfe9;
 }
 
 .m-button--primary {
@@ -820,9 +862,6 @@ small {
   *zoom: 1;
   position: relative;
   width: 100%;
-  padding: 10px;
-  background: rgba(97, 105, 117, 0.65);
-  border-radius: 6px;
 }
 .m-form-sign-up:before, .m-form-sign-up--footer:before, .m-form-sign-up:after, .m-form-sign-up--footer:after {
   content: " ";
@@ -834,12 +873,9 @@ small {
 @media screen and (min-width: 600px) {
   .m-form-sign-up, .m-form-sign-up--footer {
     width: 460px;
-    padding: 0;
-    background: transparent;
-    border-radius: none;
   }
 }
-.m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--light-blue, .m-form-sign-up--footer > .m-button--light-blue, .m-form-sign-up > .m-button--primary, .m-form-sign-up--footer > .m-button--primary {
+.m-form-sign-up > .m-button, .m-form-sign-up--footer > .m-button, .m-form-sign-up > .m-button--large, .m-form-sign-up--footer > .m-button--large, .m-form-sign-up > .m-button--dark-blue, .m-form-sign-up--footer > .m-button--dark-blue, .m-form-sign-up > .m-button--primary, .m-form-sign-up--footer > .m-button--primary {
   float: right;
 }
 
@@ -857,6 +893,7 @@ small {
   width: 100%;
   padding-bottom: 4px;
   background: transparent;
+  border-radius: 0;
   border: none;
   border-bottom: 1px solid white;
   line-height: 30px;
@@ -980,7 +1017,7 @@ small {
 
 #story-bg {
   height: 281px;
-  background-image: url("../images/story-image@2x.png");
+  background-image: url("../images/story-image@2x.jpg");
   background-size: 1200px 281px;
 }
 @media screen and (min-width: 1200px) {
@@ -1019,7 +1056,7 @@ small {
 #met-up-group {
   height: 374px;
   margin-top: -374px;
-  background-image: url("../images/together-at-last@2x.png");
+  background-image: url("../images/together-at-last.png");
   background-position: right;
   background-size: 614px 374px;
 }
@@ -1070,8 +1107,12 @@ small {
 }
 
 .franc-text {
-  color: #f665b2;
   font-weight: 400;
+}
+@media screen and (min-width: 450px) {
+  .franc-text {
+    color: #f665b2;
+  }
 }
 
 .m-wrapper, .m-wrapper--white {
@@ -1236,6 +1277,10 @@ small {
 .is-hidden {
   opacity: 0;
   display: none;
+}
+
+.t-normal {
+  font-weight: 400;
 }
 
 .ie-overlay {
