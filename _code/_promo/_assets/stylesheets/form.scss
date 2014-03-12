@@ -2,14 +2,8 @@
   @include clearfix;
   position: relative;
   width: 100%;
-  padding: $gutter/2;
-  background: transparentize($darkest-gray, 0.35);
-  border-radius: $baseline;
   @media screen and (min-width: $bp-small) {
     width: ($column * 4) + ($gutter * 3);
-    padding: 0;
-    background: transparent;
-    border-radius: none;
   }
 
   > .m-button { float: right;}
@@ -27,6 +21,7 @@
     width: 100%;
     padding-bottom: $baseline - 2;
     background: transparent;
+    border-radius:0;
     border: none;
     border-bottom: 1px solid white;
     line-height: $baseline * 5;
@@ -40,9 +35,6 @@
       @include transition (all $animation-duration);
       border-color: $pink;
     }     
-  }
-  @media screen and (min-width: $bp) {
-
   }
 }
 
