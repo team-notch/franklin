@@ -14,8 +14,10 @@
 }
 
 .franc-text {
-  color: $pink;
   font-weight: $font-normal;
+  @media screen and (min-width: $bp-smaller) {
+    color: $pink;
+  }
 }
 
 .m-wrapper {
@@ -130,6 +132,10 @@
 .is-hidden {
   opacity: 0;
   display: none;
+}
+
+.t-normal {
+  font-weight: $font-normal;
 }
 
 .ie-overlay {
